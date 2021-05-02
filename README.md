@@ -2,9 +2,9 @@
 # Documention
 For better documentation read IRC Client Documentation.pdf and the following links
 - [client.py](https://underhood31.github.io/authenticated_IRC/client)
-- [Server, main.py](https://underhood31.github.io/authenticated_IRC/client)
-- [Server, kdc.py](https://underhood31.github.io/authenticated_IRC/client)
-- [Server, chat.py](https://underhood31.github.io/authenticated_IRC/client)
+- [Server, main.py](https://underhood31.github.io/authenticated_IRC/server_main)
+- [Server, kdc.py](https://underhood31.github.io/authenticated_IRC/server_kdc)
+- [Server, chat.py](https://underhood31.github.io/authenticated_IRC/server_chat)
 
 ## Part 1, IRC client
 
