@@ -74,8 +74,10 @@ class client:
         performs rsa encryption using OAEP padding with SHA256 hash.
         OAEP: https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
         """
-        # return pub_key.encrypt(pickle.dumps(obj), padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
-        return pickle.dumps(obj)
+        try:
+            return pub_key.encrypt(pickle.dumps(obj), padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
+        except:
+            return pickle.dumps(obj)
 
     
     def private_key_encryption(self, priv_key, obj):
@@ -92,8 +94,10 @@ class client:
         performs rsa encryption using OAEP padding with SHA256 hash.
         OAEP: https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
         """
-        # return pickle.loads(priv_key.decrypt(obj, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None)))
-        return pickle.loads(obj)
+        try:
+            return pickle.loads(priv_key.decrypt(obj, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None)))
+        except:
+            return pickle.loads(obj)
     
     def public_key_decryption(self, pub_key, obj):
         """
@@ -548,8 +552,8 @@ class client:
 
             # send updated key to all others in the group
             for uid in self.group_members[group_id]:
-                
-                if uid==self.id or uid==to_client:
+                print("DATA",uid, to_client)
+                if uid==self.id or int(uid)==int(to_client):
                     print("Not sending to",uid)
                     continue
                 print("Sending to",uid)
@@ -579,7 +583,51 @@ class client:
             
             self.group_keys[group_id]=K_new
            
-        
+    def write_group_request(self, group_id,message):
+        """
+        Send the request to all the client in the
+        group via server. In the following format:
+        (
+            self.id
+            E(
+                k_temp,
+                (
+                    "/write_group",
+                    E(
+                        K, #from dh
+                        message
+                    ),
+                    to_client,
+                    group_id
+                    self.ticket
+                )
+            )
+        )
+        """
+        group_id=int(group_id)
+        K=self.group_keys[group_id]
+        for uid in self.group_members[group_id]:
+            to_send=(
+                self.id,
+                self.encrypt(
+                    self.K_temp,
+                    (
+                        "/write_group",
+                        self.encrypt(
+                            self.convert_to_key(K), #from dh
+                            message
+                        ),
+                        uid,
+                        group_id,   
+                        self.ticket
+                    )
+                )
+            )
+            self.s_CHAT = socket.socket()
+            self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+            self.s_CHAT.send(pickle.dumps(to_send))
+
+            self.disconnect()
 
     def show_IRC_UI(self):
         while True:
@@ -607,6 +655,9 @@ class client:
             elif comm=="/init_group_dhxchg":
                 #format: /init_group_dhxchg <grp_id> <client_id>
                 self.dh_key_xchange_request(int(total_split[1]),int(total_split[2]))
+            elif comm=="/write_group":
+                #format /write_group <group> <message>
+                self.write_group_request(total_split[1],total_split[2])
 
 
 
@@ -730,11 +781,17 @@ class client:
                 inner_dec=self.decrypt(self.K_temp,server_message[1])
                 group_id=int(inner_dec[2])
                 mess=inner_dec[0]
-                old_key=self.group_keys[group_id]
-                new_key=self.decrypt(self.convert_to_key(old_key),mess)
-                print("New key: ", new_key)
-                self.group_keys[group_id]=new_key
-                
+                if group_id in self.group_keys.keys():
+                    old_key=self.group_keys[group_id]
+                    print("OLD KEY", old_key)
+                    new_key=self.decrypt(self.convert_to_key(old_key),mess)
+                    print("New key: ", new_key)
+                    self.group_keys[group_id]=new_key
+            elif server_message[0]=="/write_group":
+                inner_dec=self.decrypt(self.K_temp,server_message[1])
+                K=self.group_keys[inner_dec[1]]
+                mess_dec=self.decrypt(self.convert_to_key(K),inner_dec[0])
+                print("Message from group",inner_dec[1],":",mess_dec)
             else:
                 pass
             self.conn.close()

@@ -1,0 +1,2928 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>client API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>client</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import socket,time,pickle
+import os
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+from cryptography.fernet import Fernet
+import base64
+import threading
+import pyDH
+
+#https://nitratine.net/blog/post/asymmetric-encryption-and-decryption-in-python/#:~:text=Asymmetric%20encryption%20uses%20two%20keys,key%20can%20decrypt%20the%20message.
+#https://cryptography.io/en/latest/hazmat/primitives/asymmetric/rsa/
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.asymmetric import rsa
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.asymmetric import padding
+from cryptography.hazmat.primitives import serialization
+
+ID=0
+g=2
+P=32317006071311007300338913926423828248817941241140239112842009751400741706634354222619689417363569347117901737909704191754605873209195028853758986185622153212175412514901774520270235796078236248884246189477587641105928646099411723245426622522193230540919037680524235519125679715870117001058055877651038861847280257976054903569732561526167081339361799541336476559160368317896729073178384589680639671900977202194168647225871031411336429319536193471636533209717077448227988588565369208645296636077250268955505928362751121174096972998068410554359584866583291642136218231078990999448652468262416972035911852507045361090559
+
+
+class client:
+    def __init__(self,id, kdc_server_port, kdc_server_ip, chat_server_port, chat_server_ip,key,listening_port,debug=False):
+        self.id=id
+        self.kdc_server_port=kdc_server_port
+        self.kdc_server_ip=kdc_server_ip
+        self.chat_server_port=chat_server_port
+        self.chat_server_ip=chat_server_ip
+        self.key=key
+        self.delta_time=0.5
+        self.debug_v=debug
+        self.listening_port=listening_port
+        self.accept_response=True
+        self.groups={} 
+        self.group_keys={}
+        self.group_members={}
+        #assigning public and private keys
+        self.private_key = rsa.generate_private_key(
+            public_exponent=65537,
+            key_size=2048,
+            backend=default_backend()
+        )
+        
+        self.public_key = self.private_key.public_key()
+        self.public_key_pem = self.public_key.public_bytes(
+                                    encoding=serialization.Encoding.PEM,
+                                    format=serialization.PublicFormat.SubjectPublicKeyInfo
+                                )
+        print(self.public_key_pem)
+
+    def debug(self, out_string):
+        if self.debug_v:
+            print(&#34;[debug]&#34;,out_string)
+
+    def decrypt(self, key, obj):
+        &#34;&#34;&#34;
+        decryption using furnet, which uses AES encryption
+        &#34;&#34;&#34;
+        decryption_function=Fernet(key)
+        decrypted=pickle.loads(decryption_function.decrypt(obj))
+        return decrypted
+
+    def encrypt(self, key, obj):
+        &#34;&#34;&#34;
+        encrption using furnet, which uses AES encryption
+        &#34;&#34;&#34;
+        encryption_function=Fernet(key)
+        encrypted=encryption_function.encrypt(pickle.dumps(obj))
+        return encrypted
+    
+    def public_key_encryption(self, pub_key, obj):
+        &#34;&#34;&#34;
+        performs rsa encryption using OAEP padding with SHA256 hash.
+        OAEP: https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
+        &#34;&#34;&#34;
+        try:
+            return pub_key.encrypt(pickle.dumps(obj), padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
+        except:
+            return pickle.dumps(obj)
+
+    
+    def private_key_encryption(self, priv_key, obj):
+        &#34;&#34;&#34;
+        performs rsa signing using PSS padding with SHA256 hash.
+        PSS: https://en.wikipedia.org/wiki/Probabilistic_signature_scheme
+        &#34;&#34;&#34;
+        # return priv_key.sign(pickle.dumps(obj), padding.PSS(mgf=padding.MGF1(hashes.SHA256),salt_length=padding.PSS.MAX_LENGTH),hashes.SHA256())
+        # return priv_key.encrypt(pickle.dumps(obj), padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
+        return pickle.dumps(obj)
+
+    def private_key_decryption(self, priv_key, obj):
+        &#34;&#34;&#34;
+        performs rsa encryption using OAEP padding with SHA256 hash.
+        OAEP: https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
+        &#34;&#34;&#34;
+        try:
+            return pickle.loads(priv_key.decrypt(obj, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None)))
+        except:
+            return pickle.loads(obj)
+    
+    def public_key_decryption(self, pub_key, obj):
+        &#34;&#34;&#34;
+        performs rsa verification using PSS padding with SHA256 hash.
+        PSS: https://en.wikipedia.org/wiki/Probabilistic_signature_scheme
+        &#34;&#34;&#34;
+        # pub_key.recover_data_from_signature(sig,padding.PKCS1v15(),algorithm=hashes.SHA256())
+        # pub_key.verify(obj,to_verify,padding.PSS(mgf=padding.MGF1(hashes.SHA256()),salt_length=padding.PSS.MAX_LENGTH), hashes.SHA256)
+        # return pickle.loads(pub_key.decrypt(obj, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None)))
+        return pickle.loads(obj)
+
+    def pem_to_pub_key(self, pem):
+        return serialization.load_pem_public_key(pem, backend=default_backend())
+
+    def gen_session_key(self, K_c, TS, nonce):
+        &#34;&#34;&#34;
+        Session key is the function of K_c, TS and nonce
+        These values are hashed
+        &#34;&#34;&#34;
+        derived_password=(str(K_c) + str(TS)).encode()
+        kdf = PBKDF2HMAC(algorithm=hashes.SHA256, length=32, salt=nonce, iterations=100000) #used to derive a key from password
+        key = base64.urlsafe_b64encode(kdf.derive(derived_password)) #encode as utf-8 encode instead of binary
+        return key
+
+    def convert_to_key(self, obj):
+        derived_password=pickle.dumps(obj)
+        kdf = PBKDF2HMAC(algorithm=hashes.SHA256, length=32, salt=b&#39;0&#39;, iterations=100000) #used to derive a key from password
+        key = base64.urlsafe_b64encode(kdf.derive(derived_password)) #encode as utf-8 encode instead of binary
+        return key
+
+    def hash(self, obj):
+        &#34;&#34;&#34;
+        generate hash of the object by
+        first pickling it then using SHA256
+        from hashes library and convert it to
+        urlsafe b64 encoding 
+        &#34;&#34;&#34;
+        obj_p=pickle.dumps(obj)
+        dig=hashes.Hash(hashes.SHA256())
+        dig.update(obj_p)
+        h=dig.finalize()
+        return base64.urlsafe_b64encode(h)
+    
+    def authenticate(self):
+       
+
+        &#34;&#34;&#34;
+                Client                                                        KDC
+
+            (ID_client, TS1)                ----------------&gt;         
+            
+                                            &lt;----------------           E(K_c, (E(K_temp, Ticket), Nonce, TS2))
+            K_temp=gen_session_key()
+            ticket=decrypt(K_temp, Ticket)
+        &#34;&#34;&#34;
+        self.s_KDC = socket.socket()
+        self.s_KDC.connect((self.kdc_server_ip,self.kdc_server_port))
+        request=(self.id,time.time())
+        self.s_KDC.send(pickle.dumps(request))
+
+        response=self.s_KDC.recv(4096)
+        if(response==&#34;Not Authenticated&#34;.encode()):
+            print(&#34;Unable to authenticate(wrong credentials), exiting...&#34;)
+            self.disconnect()
+            exit()
+
+        ticket_enc, nonce, TS2 = self.decrypt(self.key,response)
+        self.debug(&#34;My key is&#34;+str(self.key))
+        if time.time()-float(TS2)&lt;self.delta_time and time.time()-float(TS2)&gt;=0:
+            self.K_temp=self.gen_session_key(self.key,TS2,nonce)
+            self.debug(&#34;k_temp is&#34;+str(self.K_temp))
+            self.ticket=self.decrypt(self.K_temp,ticket_enc)
+            self.debug(&#34;ticket is&#34;+str(self.ticket))
+        else:
+            print(&#34;Unable to authenticate, exiting...&#34;)
+            self.disconnect()
+            exit()
+
+        print(&#34;Authenticated!!&#34;)
+
+    
+    def connet_to_chat_server(self):
+        &#34;&#34;&#34;
+        The client sould have a valid ticket and session_key before contacting the chat server.
+        This can be done by calling the authenticate function of this class
+
+        Client                                                    Chat Server
+        ~~~~~~                                                    ~~~~~~~~~~~~
+
+        (ID,E(k_temp,(request, pub_key,ticket))) -----------------&gt;          
+        #Here request would be /auth
+
+                                        &lt;-----------------         Acknowledgement
+                                                                    &#34;Authenticated&#34;
+                                                                          or
+                                                                  &#34;Not Authenticated&#34;
+
+        &#34;&#34;&#34;
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        packet=(&#34;/auth&#34;, self.public_key_pem,self.ticket)
+        print(&#34;ticket&#34;, self.ticket)
+        print(&#34;session key&#34;, self.K_temp)
+        packet_enc=self.encrypt(self.K_temp, packet)
+        packet_with_id=(self.id,packet_enc)
+        self.s_CHAT.send(pickle.dumps(packet_with_id))
+        response=self.s_CHAT.recv(4096)
+        if(response==&#34;Not Authenticated&#34;.encode()):
+            print(&#34;Unable to authenticate(chat server), exiting...&#34;)
+            self.disconnect()
+            exit()
+        else:
+            print(&#34;Authentication with chat server complete successfully&#34;)
+        self.disconnect()
+
+    def who_request(self):
+        print(&#34;who response: &#34;)
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        req=self.encrypt(self.K_temp,(&#34;/who&#34;,self.ticket))
+        tosend=pickle.dumps((self.id,req))
+        self.s_CHAT.send(tosend)
+        response=self.decrypt(self.K_temp,self.s_CHAT.recv(4096))
+        print(response)
+        self.disconnect()
+        return response
+    def write_all_request(self, message):
+        &#34;&#34;&#34;
+        1) get the list of connected clients
+        2) get the public keys of those clients
+        3) encrypt the message with public keys 
+            and send to all connected
+
+        The sent message would be in the following format:
+        (   self.id, 
+            E(
+                k_temp,
+                (
+                    &#34;/write_all&#34;,
+                    send_to_id,
+                    E(pub_key,(from,message)),
+                    ticket
+                )
+            )
+        )
+        &#34;&#34;&#34;
+        client_list=self.who_request()
+        for id in client_list:
+            print(&#34;condition: &#34;,id!=self.id)
+            print(id, self.id)
+            if(id!=self.id):
+                pem=self.get_public_key_request(id)
+                self.s_CHAT = socket.socket()
+                self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        
+                
+                pub_key=self.pem_to_pub_key(pem)
+                enc_message=self.public_key_encryption(pub_key,(self.id,message))
+                inner_packet=(&#34;/write_all&#34;,id,enc_message,self.ticket)
+                inner_enc=self.encrypt(self.K_temp,inner_packet)
+                complete_packet=(self.id, inner_enc)
+                print(complete_packet)
+                packet_pickled=pickle.dumps(complete_packet)
+                print(packet_pickled)
+                self.s_CHAT.send(packet_pickled)
+
+                self.disconnect()
+
+
+    def get_public_key_request(self, req_id):
+        &#34;&#34;&#34;
+        Request format: (ID, E(k_temp, (&#34;/request_public_key&#34;, req_id ,ticket)))
+        Response: E(k_temp,(&#34;/send_public_key&#34;,publickey_pem) )
+        return: public key pem
+        &#34;&#34;&#34;
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        inner=(&#34;/request_public_key&#34;, req_id, self.ticket)
+        inner_enc=self.encrypt(self.K_temp, inner)
+        print(&#34;inner: &#34;, inner_enc)
+        outer=pickle.dumps((self.id,inner_enc))
+        self.s_CHAT.send(outer)
+        response=self.s_CHAT.recv(4096)
+        if(response==&#34;Requested client not registered&#34;.encode()):
+            print(&#34;Error public key for client not found, returned None&#34;)
+            return None
+        response_dec=self.decrypt(self.K_temp, response)
+        self.disconnect()
+        return response_dec[1]
+
+    def create_group_request(self, name):
+        &#34;&#34;&#34;
+        Request format: (ID, E(k_temp, (&#34;/create_group&#34;, &#34;name of the group&#34; ,ticket)))
+        Response format: E(k_temp, (group_id,&#34;name of the group&#34;))
+
+        The dictionary self.group_members is updated with the the list
+        self.group_members[group_id] = [self.id]
+
+        After successful group creation a dpyDH.DiffieHellmanh is
+        saved in self.groups as {&lt;grp_id&gt;: private_key}
+        this key will be used for df key exchange.
+
+        After DH key exchange the final key is saved in
+        self.group_keys dictionary
+        &#34;&#34;&#34;
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        inner_packet=(&#34;/create_group&#34;, name,self.ticket)
+        inner_packet_enc=self.encrypt(self.K_temp,inner_packet)
+        outer_packet=(self.id,inner_packet_enc)
+        self.s_CHAT.send(pickle.dumps(outer_packet))
+        response=self.s_CHAT.recv(4096)
+        response_dec=self.decrypt(self.K_temp,response)
+        print(&#34;Group with id:&#34;,response_dec[0],&#34;and name:&#34;,response_dec[1],&#34;is created&#34;)
+        grp_id=int(response_dec[0])
+        self.group_members[grp_id] = [self.id]
+        self.groups[grp_id]=pyDH.DiffieHellman()
+
+        self.disconnect()
+        
+    def group_invite_request(self, grp_id, client_id):
+        &#34;&#34;&#34;
+        requst format: (ID, E(k_temp, (&#34;/group_invite&#34;, grp_id, client_id, ticket)))
+        response: E(k_temp, (&#34;/group_invite_accept&#34;,grp_id, accepted_client_id)) 
+
+        if the request is accepted then add the client to 
+        self.group_members[grp_id].append(client_id)
+        &#34;&#34;&#34;
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+
+        inner_packet= (&#34;/group_invite&#34;, grp_id, client_id,self.ticket)
+        inner_packet_enc=self.encrypt(self.K_temp, inner_packet)
+        outer_packet= (self.id, inner_packet_enc)
+        self.s_CHAT.send(pickle.dumps(outer_packet))
+
+        response=self.s_CHAT.recv(4096)
+        response_dec=self.decrypt(self.K_temp,response)
+        if response_dec[0]==&#34;/group_invite_accept&#34;:
+            print(&#34;Client:&#34;,response_dec[2],&#34;accepted the invite to the group&#34;, response_dec[1])
+            self.group_members[int(grp_id)].append(client_id)
+        elif response_dec==&#34;Not accepted&#34;:
+            print(&#34;Group invite not accepeted&#34;)
+        
+        self.disconnect()
+
+    def dh_key_xchange_request(self, group_id, to_client):
+        &#34;&#34;&#34;
+        Initial key exchange(if group_id not in self.group_keys.keys()):
+        1) get DH object from self.groups[grp_id]
+        2) get the public key of to_client
+        3) derive the public key for DH and send it to to_client via server 
+        in the following format
+            (
+                self.ID, 
+                E(
+                    k_temp,
+                    (
+                        &#34;/init_group_dhxchg&#34;.
+                        E(
+                            k_pub_to_client,
+                            my_public_key_DH
+                        ),
+                        to_client,
+                        grp_id,
+                        ticket
+                    )
+                )
+            )
+        4) The to_client will send it&#39;s public key via server in the followint format
+            E(
+                k_temp,
+                (
+                    E(
+                        private_key_to_client,
+                        to_client_public_key_DH
+                    ),
+                    E(
+                        my_public_key_DH,
+                        sha256(K)
+                    )
+                )
+            )
+        5) calculate K and verify HMAC
+        6) add key to self.group_keys
+
+        Note: keys DH keys are always saved as integers, only while
+        encrypting/decrypting they are converted to keys using 
+        self.convert_to_key()
+
+        For second and later diffie hellman
+        1) get the group key K from self.group_keys
+        2) send K to to_client via server 
+        in the following format
+            (
+                self.ID, 
+                E(
+                    k_temp,
+                    (
+                        &#34;/init_group_dhxchg&#34;.
+                        E(
+                            k_pub_to_client,
+                            g^K
+                        ),
+                        to_client,
+                        grp_id,
+                        ticket
+                    )
+                )
+            )
+        3) The to_client will send it&#39;s public key via server in the followint format
+            E(
+                k_temp,
+                (
+                    E(
+                        private_key_to_client,
+                        to_client_public_key_DH
+                    ),
+                    E(
+                        g^K,
+                        sha256(new_K)
+                    )
+                )
+            )
+        4) calculate new K using to_client_public_key_DH^(K)=g^(K*U3) and verify HMAC
+        5) Send new key to all the other members in the group in the following format
+            (
+                self.ID,
+                E(
+                    k_temp,
+                    (
+                        &#34;/update_df_key&#34;,
+                        E(
+                            K #old,
+                            new_K
+                        ),
+                        uid,
+                        grp_id,
+                        ticket
+                    )
+                )
+            )
+        6) add key to self.group_keys
+        
+        &#34;&#34;&#34;
+        
+        if group_id not in self.group_keys.keys():
+            # 1) get DH object from self.groups[grp_id]
+            dh=self.groups[group_id]
+            p=dh.p
+            # 2) get the public key of to_client
+            print(&#34;I AM HERE YOU 1&#34;)
+            pub_key_to_client_pem=self.get_public_key_request(to_client)
+            print(&#34;PEM&#34;, pub_key_to_client_pem)
+            pub_key_to_client=self.pem_to_pub_key(pub_key_to_client_pem)
+            print(&#34;KEY:&#34;,pub_key_to_client)
+            my_pub_key_DH=dh.gen_public_key()
+            print(&#34;Idh public:&#34;,my_pub_key_DH)
+            #3)
+            self.s_CHAT = socket.socket()
+            self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+            to_send=(
+                self.id, 
+                self.encrypt(
+                    self.K_temp,
+                    (
+                        &#34;/init_group_dhxchg&#34;,
+                        self.public_key_encryption(
+                            pub_key_to_client,
+                            (my_pub_key_DH)
+                        ),
+                        to_client,
+                        group_id,
+                        self.ticket
+                    )
+                )
+            )
+            print(&#34;Sending&#34;, to_send)
+            self.s_CHAT.send(pickle.dumps(to_send))
+            #4
+            response=self.s_CHAT.recv(4096)
+            response=self.decrypt(
+                self.K_temp,
+                response
+            )
+
+            to_client_public_DH=self.public_key_decryption(pub_key_to_client, response[0] )
+
+            DH_key=self.convert_to_key(my_pub_key_DH)
+            hashed_K=self.decrypt(DH_key, response[1])
+
+            #5
+            # pow(g^c2, c1)
+            K=pow(to_client_public_DH,dh.get_private_key(),dh.p)
+            my_hashed_K=self.hash(K)
+            if my_hashed_K!=hashed_K:
+                raise Exception(&#34;K hash not equal&#34;)
+            print(&#34;New key:&#34;,K)
+            self.group_keys[group_id]=K
+            self.disconnect()
+        else: 
+            
+            #1
+            old_K=self.group_keys[group_id]
+            # 2) get the public key of to_client
+            pub_key_to_client_pem=self.get_public_key_request(to_client)
+            pub_key_to_client=self.pem_to_pub_key(pub_key_to_client_pem)
+
+            global P
+            global g
+            my_pub_key_DH=pow(g,old_K,P)
+            self.s_CHAT = socket.socket()
+            self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+            #3)
+            to_send=(
+                self.id, 
+                self.encrypt(
+                    self.K_temp,
+                    (
+                        &#34;/init_group_dhxchg&#34;,
+                        self.public_key_encryption(
+                            pub_key_to_client,
+                            my_pub_key_DH
+                        ),
+                        to_client,
+                        group_id,
+                        self.ticket
+                    )
+                )
+            )
+            self.s_CHAT.send(pickle.dumps(to_send))
+            #4
+            response=self.s_CHAT.recv(4096)
+            response=self.decrypt(
+                self.K_temp,
+                response
+            )
+            
+            to_client_public_DH=self.public_key_decryption(pub_key_to_client, response[0])
+
+            DH_key=self.convert_to_key(my_pub_key_DH)
+            hashed_K=self.decrypt(DH_key, response[1])
+
+            #5
+            # pow(g^c3, K)=g^(K*c3)
+            K_new=pow(to_client_public_DH,old_K,P)
+            my_hashed_K=self.hash(K_new)
+            if my_hashed_K!=hashed_K:
+                raise Exception(&#34;K hash not equal&#34;)
+            
+            self.disconnect()
+
+            # send updated key to all others in the group
+            for uid in self.group_members[group_id]:
+                print(&#34;DATA&#34;,uid, to_client)
+                if uid==self.id or int(uid)==int(to_client):
+                    print(&#34;Not sending to&#34;,uid)
+                    continue
+                print(&#34;Sending to&#34;,uid)
+
+                self.s_CHAT = socket.socket()
+                self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+                packet=(
+                    self.id,
+                    self.encrypt(
+                        self.K_temp,
+                        (
+                            &#34;/update_df_key&#34;,
+                            self.encrypt(
+                                self.convert_to_key(old_K),
+                                K_new,
+                            ),
+                            uid,
+                            group_id,
+                            self.ticket
+                        )
+                    )
+                )
+                self.s_CHAT.send(pickle.dumps(packet))
+                self.disconnect()
+          
+            print(&#34;Updated key:&#34;,K_new)
+            
+            self.group_keys[group_id]=K_new
+           
+    def write_group_request(self, group_id,message):
+        &#34;&#34;&#34;
+        Send the request to all the client in the
+        group via server. In the following format:
+        (
+            self.id
+            E(
+                k_temp,
+                (
+                    &#34;/write_group&#34;,
+                    E(
+                        K, #from dh
+                        message
+                    ),
+                    to_client,
+                    group_id
+                    self.ticket
+                )
+            )
+        )
+        &#34;&#34;&#34;
+        group_id=int(group_id)
+        K=self.group_keys[group_id]
+        for uid in self.group_members[group_id]:
+            to_send=(
+                self.id,
+                self.encrypt(
+                    self.K_temp,
+                    (
+                        &#34;/write_group&#34;,
+                        self.encrypt(
+                            self.convert_to_key(K), #from dh
+                            message
+                        ),
+                        uid,
+                        group_id,   
+                        self.ticket
+                    )
+                )
+            )
+            self.s_CHAT = socket.socket()
+            self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+            self.s_CHAT.send(pickle.dumps(to_send))
+
+            self.disconnect()
+
+    def show_IRC_UI(self):
+        while True:
+            total=input(&#34;&gt;&gt; &#34;)
+            total_split=total.split(&#34; &#34;)
+            comm=total_split[0]
+            if comm==&#34;exit&#34;:
+                break
+            elif comm==&#34;/who&#34;:
+                self.who_request()
+            elif comm==&#34;/write_all&#34;:
+                self.write_all_request(total[len(comm)+1:])
+            elif comm==&#34;/request_public_key&#34;:
+                print(self.get_public_key_request(total_split[1]))
+            elif comm==&#34;/create_group&#34;:
+                print(total_split[1])
+                self.create_group_request(total_split[1])
+            elif comm==&#34;/group_invite&#34;:
+                #format: /group_invite &lt;grp_id&gt; &lt;client_id&gt;
+                self.group_invite_request(total_split[1], total_split[2])
+            elif comm==&#34;/group_invite_accept&#34; :
+                self.accept_response=True
+            elif comm==&#34;/group_invite_decline&#34; :
+                self.accept_response=False
+            elif comm==&#34;/init_group_dhxchg&#34;:
+                #format: /init_group_dhxchg &lt;grp_id&gt; &lt;client_id&gt;
+                self.dh_key_xchange_request(int(total_split[1]),int(total_split[2]))
+            elif comm==&#34;/write_group&#34;:
+                #format /write_group &lt;group&gt; &lt;message&gt;
+                self.write_group_request(total_split[1],total_split[2])
+
+
+
+
+                
+    def start_listening(self):
+        &#34;&#34;&#34;
+        receives the forwarded message from server.
+        message originated at indivisual clients
+
+        for a /write_all: (&#34;/write_all&#34;, E(pub_key, (from,message)))
+
+        for a /group_invite: (&#34;/group_invite&#34;,E(session_key_to, (from_client, group_id)))
+            after a successful invite acceptance, a pyDH.DiffieHellman object is
+            added to self.groups[group_id] dictionary. Final key will be saved in
+            self.group_keys after successful DH key xchange
+
+        for a &#34;/init_group_dhxchg&#34;:
+            recv format:
+                (
+                    &#34;/init_group_dhxchg&#34;,
+                    E(
+                        k_temp_to,
+                        (
+                            E(
+                                k_pub_this,
+                                others_public_key_DH
+                            ),
+                            from_client,
+                            group_id
+                        )
+                    )
+                )
+            
+            send format:
+                E(
+                    k_temp,
+                    (
+                        E(
+                            private_key_this_client,
+                            this_client_public_key_DH
+                        ),
+                        E(
+                            K,
+                            sha256(new_K)
+                        )
+                    )
+                )
+            
+        for &#34;/update_df_key&#34; request:
+            (
+                &#34;/update_df_key&#34;,
+                E(
+                    k_temp_to,
+                    (
+                        E(
+                            K #old,
+                            new_K
+                        ),
+                        from_client,
+                        group_id
+                    )
+                )
+            )
+
+        &#34;&#34;&#34;
+        print(&#34;Listening Started&#34;)
+        self.s = socket.socket()
+        self.s.bind((&#39;&#39;,int(self.listening_port)))
+
+        
+        self.s.listen(1)
+        
+        while True:
+            self.conn,self.addr = self.s.accept()
+            server_message=pickle.loads(self.conn.recv(4096))
+            print(&#34;Server message&#34;,server_message)
+            print(&#34;&#34;)
+            print(server_message[0])
+            if(server_message[0]==&#34;/write_all&#34;):
+                message=self.private_key_decryption(self.private_key,server_message[1])
+                from_=message[0]
+                message_text=message[1]
+                print(&#34;Received from&#34;,from_,&#34;:&#34;,message[1])
+            elif server_message[0]==&#34;/group_invite&#34;:
+                inner_dec=self.decrypt(self.K_temp,server_message[1])
+                print(&#34;Got a group request from&#34;,inner_dec[0],&#34;for group &#34;,inner_dec[1])
+                print(&#34;Sending auto response to accept response:&#34;,self.accept_response)
+               
+                if self.accept_response:
+                    packet=self.encrypt(self.K_temp,&#34;/group_invite_accept&#34;)
+                    self.conn.send(packet)
+                    self.groups[int(inner_dec[1])]=pyDH.DiffieHellman()
+                else:
+                    packet=self.encrypt(self.K_temp,&#34;/Not accepted&#34;)
+                    self.conn.send(packet)
+            elif server_message[0]==&#34;/init_group_dhxchg&#34;:
+                inner_dec=self.decrypt(self.K_temp,server_message[1])
+                group_id=int(inner_dec[2])
+                from_id=int(inner_dec[1])
+                mess=inner_dec[0]
+
+                dh=self.groups[group_id]
+                other_public_dh=self.private_key_decryption(self.private_key, mess)
+                p=P
+
+                #pow(g^c2, c1,p)=g^(c2*c1)mod(p)
+                K=pow(other_public_dh,dh.get_private_key(), P)
+                response=(
+                    self.private_key_encryption(self.private_key,dh.gen_public_key()),
+                    self.encrypt(
+                        self.convert_to_key(other_public_dh),
+                        self.hash(K)
+                    )
+                )
+                response_enc=self.encrypt(self.K_temp,response)
+                self.conn.send(response_enc)
+                print(&#34;Generated key: &#34;, K)
+                self.group_keys[group_id]=K                    
+            elif server_message[0]==&#34;/update_df_key&#34;:
+                inner_dec=self.decrypt(self.K_temp,server_message[1])
+                group_id=int(inner_dec[2])
+                mess=inner_dec[0]
+                if group_id in self.group_keys.keys():
+                    old_key=self.group_keys[group_id]
+                    print(&#34;OLD KEY&#34;, old_key)
+                    new_key=self.decrypt(self.convert_to_key(old_key),mess)
+                    print(&#34;New key: &#34;, new_key)
+                    self.group_keys[group_id]=new_key
+            elif server_message[0]==&#34;/write_group&#34;:
+                inner_dec=self.decrypt(self.K_temp,server_message[1])
+                K=self.group_keys[inner_dec[1]]
+                mess_dec=self.decrypt(self.convert_to_key(K),inner_dec[0])
+                print(&#34;Message from group&#34;,inner_dec[1],&#34;:&#34;,mess_dec)
+            else:
+                pass
+            self.conn.close()
+
+    def disconnect(self):
+        try:
+            self.s_KDC.close()
+            self.s_CHAT.close()
+        except:
+            pass
+
+
+def loadData(name):
+    f=open(name,&#39;rb&#39;)
+    return pickle.load(f)
+
+if __name__==&#34;__main__&#34;:
+
+    filename=&#34;client_&#34;+str(ID)+&#34;.info&#34;
+    id,key,listening_ip,listening_port=loadData(filename)
+    server_info=loadData(&#34;../server.info&#34;)
+    this_client=client(id, server_info[&#39;kdc_server_port&#39;], server_info[&#39;kdc_server_ip&#39;], server_info[&#39;chat_server_port&#39;], server_info[&#39;chat_server_ip&#39;], key,listening_port,debug=True)
+    this_client.authenticate()
+    this_client.connet_to_chat_server()
+    # now open a another thread that will listen
+    # for server messages
+    listen_thread=threading.Thread(target=this_client.start_listening)
+    listen_thread.start()
+    this_client.show_IRC_UI()
+    this_client.disconnect()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="client.loadData"><code class="name flex">
+<span>def <span class="ident">loadData</span></span>(<span>name)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def loadData(name):
+    f=open(name,&#39;rb&#39;)
+    return pickle.load(f)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="client.client"><code class="flex name class">
+<span>class <span class="ident">client</span></span>
+<span>(</span><span>id, kdc_server_port, kdc_server_ip, chat_server_port, chat_server_ip, key, listening_port, debug=False)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class client:
+    def __init__(self,id, kdc_server_port, kdc_server_ip, chat_server_port, chat_server_ip,key,listening_port,debug=False):
+        self.id=id
+        self.kdc_server_port=kdc_server_port
+        self.kdc_server_ip=kdc_server_ip
+        self.chat_server_port=chat_server_port
+        self.chat_server_ip=chat_server_ip
+        self.key=key
+        self.delta_time=0.5
+        self.debug_v=debug
+        self.listening_port=listening_port
+        self.accept_response=True
+        self.groups={} 
+        self.group_keys={}
+        self.group_members={}
+        #assigning public and private keys
+        self.private_key = rsa.generate_private_key(
+            public_exponent=65537,
+            key_size=2048,
+            backend=default_backend()
+        )
+        
+        self.public_key = self.private_key.public_key()
+        self.public_key_pem = self.public_key.public_bytes(
+                                    encoding=serialization.Encoding.PEM,
+                                    format=serialization.PublicFormat.SubjectPublicKeyInfo
+                                )
+        print(self.public_key_pem)
+
+    def debug(self, out_string):
+        if self.debug_v:
+            print(&#34;[debug]&#34;,out_string)
+
+    def decrypt(self, key, obj):
+        &#34;&#34;&#34;
+        decryption using furnet, which uses AES encryption
+        &#34;&#34;&#34;
+        decryption_function=Fernet(key)
+        decrypted=pickle.loads(decryption_function.decrypt(obj))
+        return decrypted
+
+    def encrypt(self, key, obj):
+        &#34;&#34;&#34;
+        encrption using furnet, which uses AES encryption
+        &#34;&#34;&#34;
+        encryption_function=Fernet(key)
+        encrypted=encryption_function.encrypt(pickle.dumps(obj))
+        return encrypted
+    
+    def public_key_encryption(self, pub_key, obj):
+        &#34;&#34;&#34;
+        performs rsa encryption using OAEP padding with SHA256 hash.
+        OAEP: https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
+        &#34;&#34;&#34;
+        try:
+            return pub_key.encrypt(pickle.dumps(obj), padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
+        except:
+            return pickle.dumps(obj)
+
+    
+    def private_key_encryption(self, priv_key, obj):
+        &#34;&#34;&#34;
+        performs rsa signing using PSS padding with SHA256 hash.
+        PSS: https://en.wikipedia.org/wiki/Probabilistic_signature_scheme
+        &#34;&#34;&#34;
+        # return priv_key.sign(pickle.dumps(obj), padding.PSS(mgf=padding.MGF1(hashes.SHA256),salt_length=padding.PSS.MAX_LENGTH),hashes.SHA256())
+        # return priv_key.encrypt(pickle.dumps(obj), padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
+        return pickle.dumps(obj)
+
+    def private_key_decryption(self, priv_key, obj):
+        &#34;&#34;&#34;
+        performs rsa encryption using OAEP padding with SHA256 hash.
+        OAEP: https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
+        &#34;&#34;&#34;
+        try:
+            return pickle.loads(priv_key.decrypt(obj, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None)))
+        except:
+            return pickle.loads(obj)
+    
+    def public_key_decryption(self, pub_key, obj):
+        &#34;&#34;&#34;
+        performs rsa verification using PSS padding with SHA256 hash.
+        PSS: https://en.wikipedia.org/wiki/Probabilistic_signature_scheme
+        &#34;&#34;&#34;
+        # pub_key.recover_data_from_signature(sig,padding.PKCS1v15(),algorithm=hashes.SHA256())
+        # pub_key.verify(obj,to_verify,padding.PSS(mgf=padding.MGF1(hashes.SHA256()),salt_length=padding.PSS.MAX_LENGTH), hashes.SHA256)
+        # return pickle.loads(pub_key.decrypt(obj, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None)))
+        return pickle.loads(obj)
+
+    def pem_to_pub_key(self, pem):
+        return serialization.load_pem_public_key(pem, backend=default_backend())
+
+    def gen_session_key(self, K_c, TS, nonce):
+        &#34;&#34;&#34;
+        Session key is the function of K_c, TS and nonce
+        These values are hashed
+        &#34;&#34;&#34;
+        derived_password=(str(K_c) + str(TS)).encode()
+        kdf = PBKDF2HMAC(algorithm=hashes.SHA256, length=32, salt=nonce, iterations=100000) #used to derive a key from password
+        key = base64.urlsafe_b64encode(kdf.derive(derived_password)) #encode as utf-8 encode instead of binary
+        return key
+
+    def convert_to_key(self, obj):
+        derived_password=pickle.dumps(obj)
+        kdf = PBKDF2HMAC(algorithm=hashes.SHA256, length=32, salt=b&#39;0&#39;, iterations=100000) #used to derive a key from password
+        key = base64.urlsafe_b64encode(kdf.derive(derived_password)) #encode as utf-8 encode instead of binary
+        return key
+
+    def hash(self, obj):
+        &#34;&#34;&#34;
+        generate hash of the object by
+        first pickling it then using SHA256
+        from hashes library and convert it to
+        urlsafe b64 encoding 
+        &#34;&#34;&#34;
+        obj_p=pickle.dumps(obj)
+        dig=hashes.Hash(hashes.SHA256())
+        dig.update(obj_p)
+        h=dig.finalize()
+        return base64.urlsafe_b64encode(h)
+    
+    def authenticate(self):
+       
+
+        &#34;&#34;&#34;
+                Client                                                        KDC
+
+            (ID_client, TS1)                ----------------&gt;         
+            
+                                            &lt;----------------           E(K_c, (E(K_temp, Ticket), Nonce, TS2))
+            K_temp=gen_session_key()
+            ticket=decrypt(K_temp, Ticket)
+        &#34;&#34;&#34;
+        self.s_KDC = socket.socket()
+        self.s_KDC.connect((self.kdc_server_ip,self.kdc_server_port))
+        request=(self.id,time.time())
+        self.s_KDC.send(pickle.dumps(request))
+
+        response=self.s_KDC.recv(4096)
+        if(response==&#34;Not Authenticated&#34;.encode()):
+            print(&#34;Unable to authenticate(wrong credentials), exiting...&#34;)
+            self.disconnect()
+            exit()
+
+        ticket_enc, nonce, TS2 = self.decrypt(self.key,response)
+        self.debug(&#34;My key is&#34;+str(self.key))
+        if time.time()-float(TS2)&lt;self.delta_time and time.time()-float(TS2)&gt;=0:
+            self.K_temp=self.gen_session_key(self.key,TS2,nonce)
+            self.debug(&#34;k_temp is&#34;+str(self.K_temp))
+            self.ticket=self.decrypt(self.K_temp,ticket_enc)
+            self.debug(&#34;ticket is&#34;+str(self.ticket))
+        else:
+            print(&#34;Unable to authenticate, exiting...&#34;)
+            self.disconnect()
+            exit()
+
+        print(&#34;Authenticated!!&#34;)
+
+    
+    def connet_to_chat_server(self):
+        &#34;&#34;&#34;
+        The client sould have a valid ticket and session_key before contacting the chat server.
+        This can be done by calling the authenticate function of this class
+
+        Client                                                    Chat Server
+        ~~~~~~                                                    ~~~~~~~~~~~~
+
+        (ID,E(k_temp,(request, pub_key,ticket))) -----------------&gt;          
+        #Here request would be /auth
+
+                                        &lt;-----------------         Acknowledgement
+                                                                    &#34;Authenticated&#34;
+                                                                          or
+                                                                  &#34;Not Authenticated&#34;
+
+        &#34;&#34;&#34;
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        packet=(&#34;/auth&#34;, self.public_key_pem,self.ticket)
+        print(&#34;ticket&#34;, self.ticket)
+        print(&#34;session key&#34;, self.K_temp)
+        packet_enc=self.encrypt(self.K_temp, packet)
+        packet_with_id=(self.id,packet_enc)
+        self.s_CHAT.send(pickle.dumps(packet_with_id))
+        response=self.s_CHAT.recv(4096)
+        if(response==&#34;Not Authenticated&#34;.encode()):
+            print(&#34;Unable to authenticate(chat server), exiting...&#34;)
+            self.disconnect()
+            exit()
+        else:
+            print(&#34;Authentication with chat server complete successfully&#34;)
+        self.disconnect()
+
+    def who_request(self):
+        print(&#34;who response: &#34;)
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        req=self.encrypt(self.K_temp,(&#34;/who&#34;,self.ticket))
+        tosend=pickle.dumps((self.id,req))
+        self.s_CHAT.send(tosend)
+        response=self.decrypt(self.K_temp,self.s_CHAT.recv(4096))
+        print(response)
+        self.disconnect()
+        return response
+    def write_all_request(self, message):
+        &#34;&#34;&#34;
+        1) get the list of connected clients
+        2) get the public keys of those clients
+        3) encrypt the message with public keys 
+            and send to all connected
+
+        The sent message would be in the following format:
+        (   self.id, 
+            E(
+                k_temp,
+                (
+                    &#34;/write_all&#34;,
+                    send_to_id,
+                    E(pub_key,(from,message)),
+                    ticket
+                )
+            )
+        )
+        &#34;&#34;&#34;
+        client_list=self.who_request()
+        for id in client_list:
+            print(&#34;condition: &#34;,id!=self.id)
+            print(id, self.id)
+            if(id!=self.id):
+                pem=self.get_public_key_request(id)
+                self.s_CHAT = socket.socket()
+                self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        
+                
+                pub_key=self.pem_to_pub_key(pem)
+                enc_message=self.public_key_encryption(pub_key,(self.id,message))
+                inner_packet=(&#34;/write_all&#34;,id,enc_message,self.ticket)
+                inner_enc=self.encrypt(self.K_temp,inner_packet)
+                complete_packet=(self.id, inner_enc)
+                print(complete_packet)
+                packet_pickled=pickle.dumps(complete_packet)
+                print(packet_pickled)
+                self.s_CHAT.send(packet_pickled)
+
+                self.disconnect()
+
+
+    def get_public_key_request(self, req_id):
+        &#34;&#34;&#34;
+        Request format: (ID, E(k_temp, (&#34;/request_public_key&#34;, req_id ,ticket)))
+        Response: E(k_temp,(&#34;/send_public_key&#34;,publickey_pem) )
+        return: public key pem
+        &#34;&#34;&#34;
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        inner=(&#34;/request_public_key&#34;, req_id, self.ticket)
+        inner_enc=self.encrypt(self.K_temp, inner)
+        print(&#34;inner: &#34;, inner_enc)
+        outer=pickle.dumps((self.id,inner_enc))
+        self.s_CHAT.send(outer)
+        response=self.s_CHAT.recv(4096)
+        if(response==&#34;Requested client not registered&#34;.encode()):
+            print(&#34;Error public key for client not found, returned None&#34;)
+            return None
+        response_dec=self.decrypt(self.K_temp, response)
+        self.disconnect()
+        return response_dec[1]
+
+    def create_group_request(self, name):
+        &#34;&#34;&#34;
+        Request format: (ID, E(k_temp, (&#34;/create_group&#34;, &#34;name of the group&#34; ,ticket)))
+        Response format: E(k_temp, (group_id,&#34;name of the group&#34;))
+
+        The dictionary self.group_members is updated with the the list
+        self.group_members[group_id] = [self.id]
+
+        After successful group creation a dpyDH.DiffieHellmanh is
+        saved in self.groups as {&lt;grp_id&gt;: private_key}
+        this key will be used for df key exchange.
+
+        After DH key exchange the final key is saved in
+        self.group_keys dictionary
+        &#34;&#34;&#34;
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        inner_packet=(&#34;/create_group&#34;, name,self.ticket)
+        inner_packet_enc=self.encrypt(self.K_temp,inner_packet)
+        outer_packet=(self.id,inner_packet_enc)
+        self.s_CHAT.send(pickle.dumps(outer_packet))
+        response=self.s_CHAT.recv(4096)
+        response_dec=self.decrypt(self.K_temp,response)
+        print(&#34;Group with id:&#34;,response_dec[0],&#34;and name:&#34;,response_dec[1],&#34;is created&#34;)
+        grp_id=int(response_dec[0])
+        self.group_members[grp_id] = [self.id]
+        self.groups[grp_id]=pyDH.DiffieHellman()
+
+        self.disconnect()
+        
+    def group_invite_request(self, grp_id, client_id):
+        &#34;&#34;&#34;
+        requst format: (ID, E(k_temp, (&#34;/group_invite&#34;, grp_id, client_id, ticket)))
+        response: E(k_temp, (&#34;/group_invite_accept&#34;,grp_id, accepted_client_id)) 
+
+        if the request is accepted then add the client to 
+        self.group_members[grp_id].append(client_id)
+        &#34;&#34;&#34;
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+
+        inner_packet= (&#34;/group_invite&#34;, grp_id, client_id,self.ticket)
+        inner_packet_enc=self.encrypt(self.K_temp, inner_packet)
+        outer_packet= (self.id, inner_packet_enc)
+        self.s_CHAT.send(pickle.dumps(outer_packet))
+
+        response=self.s_CHAT.recv(4096)
+        response_dec=self.decrypt(self.K_temp,response)
+        if response_dec[0]==&#34;/group_invite_accept&#34;:
+            print(&#34;Client:&#34;,response_dec[2],&#34;accepted the invite to the group&#34;, response_dec[1])
+            self.group_members[int(grp_id)].append(client_id)
+        elif response_dec==&#34;Not accepted&#34;:
+            print(&#34;Group invite not accepeted&#34;)
+        
+        self.disconnect()
+
+    def dh_key_xchange_request(self, group_id, to_client):
+        &#34;&#34;&#34;
+        Initial key exchange(if group_id not in self.group_keys.keys()):
+        1) get DH object from self.groups[grp_id]
+        2) get the public key of to_client
+        3) derive the public key for DH and send it to to_client via server 
+        in the following format
+            (
+                self.ID, 
+                E(
+                    k_temp,
+                    (
+                        &#34;/init_group_dhxchg&#34;.
+                        E(
+                            k_pub_to_client,
+                            my_public_key_DH
+                        ),
+                        to_client,
+                        grp_id,
+                        ticket
+                    )
+                )
+            )
+        4) The to_client will send it&#39;s public key via server in the followint format
+            E(
+                k_temp,
+                (
+                    E(
+                        private_key_to_client,
+                        to_client_public_key_DH
+                    ),
+                    E(
+                        my_public_key_DH,
+                        sha256(K)
+                    )
+                )
+            )
+        5) calculate K and verify HMAC
+        6) add key to self.group_keys
+
+        Note: keys DH keys are always saved as integers, only while
+        encrypting/decrypting they are converted to keys using 
+        self.convert_to_key()
+
+        For second and later diffie hellman
+        1) get the group key K from self.group_keys
+        2) send K to to_client via server 
+        in the following format
+            (
+                self.ID, 
+                E(
+                    k_temp,
+                    (
+                        &#34;/init_group_dhxchg&#34;.
+                        E(
+                            k_pub_to_client,
+                            g^K
+                        ),
+                        to_client,
+                        grp_id,
+                        ticket
+                    )
+                )
+            )
+        3) The to_client will send it&#39;s public key via server in the followint format
+            E(
+                k_temp,
+                (
+                    E(
+                        private_key_to_client,
+                        to_client_public_key_DH
+                    ),
+                    E(
+                        g^K,
+                        sha256(new_K)
+                    )
+                )
+            )
+        4) calculate new K using to_client_public_key_DH^(K)=g^(K*U3) and verify HMAC
+        5) Send new key to all the other members in the group in the following format
+            (
+                self.ID,
+                E(
+                    k_temp,
+                    (
+                        &#34;/update_df_key&#34;,
+                        E(
+                            K #old,
+                            new_K
+                        ),
+                        uid,
+                        grp_id,
+                        ticket
+                    )
+                )
+            )
+        6) add key to self.group_keys
+        
+        &#34;&#34;&#34;
+        
+        if group_id not in self.group_keys.keys():
+            # 1) get DH object from self.groups[grp_id]
+            dh=self.groups[group_id]
+            p=dh.p
+            # 2) get the public key of to_client
+            print(&#34;I AM HERE YOU 1&#34;)
+            pub_key_to_client_pem=self.get_public_key_request(to_client)
+            print(&#34;PEM&#34;, pub_key_to_client_pem)
+            pub_key_to_client=self.pem_to_pub_key(pub_key_to_client_pem)
+            print(&#34;KEY:&#34;,pub_key_to_client)
+            my_pub_key_DH=dh.gen_public_key()
+            print(&#34;Idh public:&#34;,my_pub_key_DH)
+            #3)
+            self.s_CHAT = socket.socket()
+            self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+            to_send=(
+                self.id, 
+                self.encrypt(
+                    self.K_temp,
+                    (
+                        &#34;/init_group_dhxchg&#34;,
+                        self.public_key_encryption(
+                            pub_key_to_client,
+                            (my_pub_key_DH)
+                        ),
+                        to_client,
+                        group_id,
+                        self.ticket
+                    )
+                )
+            )
+            print(&#34;Sending&#34;, to_send)
+            self.s_CHAT.send(pickle.dumps(to_send))
+            #4
+            response=self.s_CHAT.recv(4096)
+            response=self.decrypt(
+                self.K_temp,
+                response
+            )
+
+            to_client_public_DH=self.public_key_decryption(pub_key_to_client, response[0] )
+
+            DH_key=self.convert_to_key(my_pub_key_DH)
+            hashed_K=self.decrypt(DH_key, response[1])
+
+            #5
+            # pow(g^c2, c1)
+            K=pow(to_client_public_DH,dh.get_private_key(),dh.p)
+            my_hashed_K=self.hash(K)
+            if my_hashed_K!=hashed_K:
+                raise Exception(&#34;K hash not equal&#34;)
+            print(&#34;New key:&#34;,K)
+            self.group_keys[group_id]=K
+            self.disconnect()
+        else: 
+            
+            #1
+            old_K=self.group_keys[group_id]
+            # 2) get the public key of to_client
+            pub_key_to_client_pem=self.get_public_key_request(to_client)
+            pub_key_to_client=self.pem_to_pub_key(pub_key_to_client_pem)
+
+            global P
+            global g
+            my_pub_key_DH=pow(g,old_K,P)
+            self.s_CHAT = socket.socket()
+            self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+            #3)
+            to_send=(
+                self.id, 
+                self.encrypt(
+                    self.K_temp,
+                    (
+                        &#34;/init_group_dhxchg&#34;,
+                        self.public_key_encryption(
+                            pub_key_to_client,
+                            my_pub_key_DH
+                        ),
+                        to_client,
+                        group_id,
+                        self.ticket
+                    )
+                )
+            )
+            self.s_CHAT.send(pickle.dumps(to_send))
+            #4
+            response=self.s_CHAT.recv(4096)
+            response=self.decrypt(
+                self.K_temp,
+                response
+            )
+            
+            to_client_public_DH=self.public_key_decryption(pub_key_to_client, response[0])
+
+            DH_key=self.convert_to_key(my_pub_key_DH)
+            hashed_K=self.decrypt(DH_key, response[1])
+
+            #5
+            # pow(g^c3, K)=g^(K*c3)
+            K_new=pow(to_client_public_DH,old_K,P)
+            my_hashed_K=self.hash(K_new)
+            if my_hashed_K!=hashed_K:
+                raise Exception(&#34;K hash not equal&#34;)
+            
+            self.disconnect()
+
+            # send updated key to all others in the group
+            for uid in self.group_members[group_id]:
+                print(&#34;DATA&#34;,uid, to_client)
+                if uid==self.id or int(uid)==int(to_client):
+                    print(&#34;Not sending to&#34;,uid)
+                    continue
+                print(&#34;Sending to&#34;,uid)
+
+                self.s_CHAT = socket.socket()
+                self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+                packet=(
+                    self.id,
+                    self.encrypt(
+                        self.K_temp,
+                        (
+                            &#34;/update_df_key&#34;,
+                            self.encrypt(
+                                self.convert_to_key(old_K),
+                                K_new,
+                            ),
+                            uid,
+                            group_id,
+                            self.ticket
+                        )
+                    )
+                )
+                self.s_CHAT.send(pickle.dumps(packet))
+                self.disconnect()
+          
+            print(&#34;Updated key:&#34;,K_new)
+            
+            self.group_keys[group_id]=K_new
+           
+    def write_group_request(self, group_id,message):
+        &#34;&#34;&#34;
+        Send the request to all the client in the
+        group via server. In the following format:
+        (
+            self.id
+            E(
+                k_temp,
+                (
+                    &#34;/write_group&#34;,
+                    E(
+                        K, #from dh
+                        message
+                    ),
+                    to_client,
+                    group_id
+                    self.ticket
+                )
+            )
+        )
+        &#34;&#34;&#34;
+        group_id=int(group_id)
+        K=self.group_keys[group_id]
+        for uid in self.group_members[group_id]:
+            to_send=(
+                self.id,
+                self.encrypt(
+                    self.K_temp,
+                    (
+                        &#34;/write_group&#34;,
+                        self.encrypt(
+                            self.convert_to_key(K), #from dh
+                            message
+                        ),
+                        uid,
+                        group_id,   
+                        self.ticket
+                    )
+                )
+            )
+            self.s_CHAT = socket.socket()
+            self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+            self.s_CHAT.send(pickle.dumps(to_send))
+
+            self.disconnect()
+
+    def show_IRC_UI(self):
+        while True:
+            total=input(&#34;&gt;&gt; &#34;)
+            total_split=total.split(&#34; &#34;)
+            comm=total_split[0]
+            if comm==&#34;exit&#34;:
+                break
+            elif comm==&#34;/who&#34;:
+                self.who_request()
+            elif comm==&#34;/write_all&#34;:
+                self.write_all_request(total[len(comm)+1:])
+            elif comm==&#34;/request_public_key&#34;:
+                print(self.get_public_key_request(total_split[1]))
+            elif comm==&#34;/create_group&#34;:
+                print(total_split[1])
+                self.create_group_request(total_split[1])
+            elif comm==&#34;/group_invite&#34;:
+                #format: /group_invite &lt;grp_id&gt; &lt;client_id&gt;
+                self.group_invite_request(total_split[1], total_split[2])
+            elif comm==&#34;/group_invite_accept&#34; :
+                self.accept_response=True
+            elif comm==&#34;/group_invite_decline&#34; :
+                self.accept_response=False
+            elif comm==&#34;/init_group_dhxchg&#34;:
+                #format: /init_group_dhxchg &lt;grp_id&gt; &lt;client_id&gt;
+                self.dh_key_xchange_request(int(total_split[1]),int(total_split[2]))
+            elif comm==&#34;/write_group&#34;:
+                #format /write_group &lt;group&gt; &lt;message&gt;
+                self.write_group_request(total_split[1],total_split[2])
+
+
+
+
+                
+    def start_listening(self):
+        &#34;&#34;&#34;
+        receives the forwarded message from server.
+        message originated at indivisual clients
+
+        for a /write_all: (&#34;/write_all&#34;, E(pub_key, (from,message)))
+
+        for a /group_invite: (&#34;/group_invite&#34;,E(session_key_to, (from_client, group_id)))
+            after a successful invite acceptance, a pyDH.DiffieHellman object is
+            added to self.groups[group_id] dictionary. Final key will be saved in
+            self.group_keys after successful DH key xchange
+
+        for a &#34;/init_group_dhxchg&#34;:
+            recv format:
+                (
+                    &#34;/init_group_dhxchg&#34;,
+                    E(
+                        k_temp_to,
+                        (
+                            E(
+                                k_pub_this,
+                                others_public_key_DH
+                            ),
+                            from_client,
+                            group_id
+                        )
+                    )
+                )
+            
+            send format:
+                E(
+                    k_temp,
+                    (
+                        E(
+                            private_key_this_client,
+                            this_client_public_key_DH
+                        ),
+                        E(
+                            K,
+                            sha256(new_K)
+                        )
+                    )
+                )
+            
+        for &#34;/update_df_key&#34; request:
+            (
+                &#34;/update_df_key&#34;,
+                E(
+                    k_temp_to,
+                    (
+                        E(
+                            K #old,
+                            new_K
+                        ),
+                        from_client,
+                        group_id
+                    )
+                )
+            )
+
+        &#34;&#34;&#34;
+        print(&#34;Listening Started&#34;)
+        self.s = socket.socket()
+        self.s.bind((&#39;&#39;,int(self.listening_port)))
+
+        
+        self.s.listen(1)
+        
+        while True:
+            self.conn,self.addr = self.s.accept()
+            server_message=pickle.loads(self.conn.recv(4096))
+            print(&#34;Server message&#34;,server_message)
+            print(&#34;&#34;)
+            print(server_message[0])
+            if(server_message[0]==&#34;/write_all&#34;):
+                message=self.private_key_decryption(self.private_key,server_message[1])
+                from_=message[0]
+                message_text=message[1]
+                print(&#34;Received from&#34;,from_,&#34;:&#34;,message[1])
+            elif server_message[0]==&#34;/group_invite&#34;:
+                inner_dec=self.decrypt(self.K_temp,server_message[1])
+                print(&#34;Got a group request from&#34;,inner_dec[0],&#34;for group &#34;,inner_dec[1])
+                print(&#34;Sending auto response to accept response:&#34;,self.accept_response)
+               
+                if self.accept_response:
+                    packet=self.encrypt(self.K_temp,&#34;/group_invite_accept&#34;)
+                    self.conn.send(packet)
+                    self.groups[int(inner_dec[1])]=pyDH.DiffieHellman()
+                else:
+                    packet=self.encrypt(self.K_temp,&#34;/Not accepted&#34;)
+                    self.conn.send(packet)
+            elif server_message[0]==&#34;/init_group_dhxchg&#34;:
+                inner_dec=self.decrypt(self.K_temp,server_message[1])
+                group_id=int(inner_dec[2])
+                from_id=int(inner_dec[1])
+                mess=inner_dec[0]
+
+                dh=self.groups[group_id]
+                other_public_dh=self.private_key_decryption(self.private_key, mess)
+                p=P
+
+                #pow(g^c2, c1,p)=g^(c2*c1)mod(p)
+                K=pow(other_public_dh,dh.get_private_key(), P)
+                response=(
+                    self.private_key_encryption(self.private_key,dh.gen_public_key()),
+                    self.encrypt(
+                        self.convert_to_key(other_public_dh),
+                        self.hash(K)
+                    )
+                )
+                response_enc=self.encrypt(self.K_temp,response)
+                self.conn.send(response_enc)
+                print(&#34;Generated key: &#34;, K)
+                self.group_keys[group_id]=K                    
+            elif server_message[0]==&#34;/update_df_key&#34;:
+                inner_dec=self.decrypt(self.K_temp,server_message[1])
+                group_id=int(inner_dec[2])
+                mess=inner_dec[0]
+                if group_id in self.group_keys.keys():
+                    old_key=self.group_keys[group_id]
+                    print(&#34;OLD KEY&#34;, old_key)
+                    new_key=self.decrypt(self.convert_to_key(old_key),mess)
+                    print(&#34;New key: &#34;, new_key)
+                    self.group_keys[group_id]=new_key
+            elif server_message[0]==&#34;/write_group&#34;:
+                inner_dec=self.decrypt(self.K_temp,server_message[1])
+                K=self.group_keys[inner_dec[1]]
+                mess_dec=self.decrypt(self.convert_to_key(K),inner_dec[0])
+                print(&#34;Message from group&#34;,inner_dec[1],&#34;:&#34;,mess_dec)
+            else:
+                pass
+            self.conn.close()
+
+    def disconnect(self):
+        try:
+            self.s_KDC.close()
+            self.s_CHAT.close()
+        except:
+            pass</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="client.client.authenticate"><code class="name flex">
+<span>def <span class="ident">authenticate</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Client
+KDC</p>
+<p>(ID_client, TS1)
+----------------&gt;
+</p>
+<pre><code>                            &lt;----------------           E(K_c, (E(K_temp, Ticket), Nonce, TS2))
+</code></pre>
+<p>K_temp=gen_session_key()
+ticket=decrypt(K_temp, Ticket)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def authenticate(self):
+   
+
+    &#34;&#34;&#34;
+            Client                                                        KDC
+
+        (ID_client, TS1)                ----------------&gt;         
+        
+                                        &lt;----------------           E(K_c, (E(K_temp, Ticket), Nonce, TS2))
+        K_temp=gen_session_key()
+        ticket=decrypt(K_temp, Ticket)
+    &#34;&#34;&#34;
+    self.s_KDC = socket.socket()
+    self.s_KDC.connect((self.kdc_server_ip,self.kdc_server_port))
+    request=(self.id,time.time())
+    self.s_KDC.send(pickle.dumps(request))
+
+    response=self.s_KDC.recv(4096)
+    if(response==&#34;Not Authenticated&#34;.encode()):
+        print(&#34;Unable to authenticate(wrong credentials), exiting...&#34;)
+        self.disconnect()
+        exit()
+
+    ticket_enc, nonce, TS2 = self.decrypt(self.key,response)
+    self.debug(&#34;My key is&#34;+str(self.key))
+    if time.time()-float(TS2)&lt;self.delta_time and time.time()-float(TS2)&gt;=0:
+        self.K_temp=self.gen_session_key(self.key,TS2,nonce)
+        self.debug(&#34;k_temp is&#34;+str(self.K_temp))
+        self.ticket=self.decrypt(self.K_temp,ticket_enc)
+        self.debug(&#34;ticket is&#34;+str(self.ticket))
+    else:
+        print(&#34;Unable to authenticate, exiting...&#34;)
+        self.disconnect()
+        exit()
+
+    print(&#34;Authenticated!!&#34;)</code></pre>
+</details>
+</dd>
+<dt id="client.client.connet_to_chat_server"><code class="name flex">
+<span>def <span class="ident">connet_to_chat_server</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The client sould have a valid ticket and session_key before contacting the chat server.
+This can be done by calling the authenticate function of this class</p>
+<p>Client
+Chat Server
+~~~~~~
+~~~~~~~~~~~~</p>
+<p>(ID,E(k_temp,(request, pub_key,ticket))) -----------------&gt;
+</p>
+<h1 id="here-request-would-be-auth">Here request would be /auth</h1>
+<pre><code>                            &lt;-----------------         Acknowledgement
+                                                        "Authenticated"
+                                                              or
+                                                      "Not Authenticated"
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def connet_to_chat_server(self):
+    &#34;&#34;&#34;
+    The client sould have a valid ticket and session_key before contacting the chat server.
+    This can be done by calling the authenticate function of this class
+
+    Client                                                    Chat Server
+    ~~~~~~                                                    ~~~~~~~~~~~~
+
+    (ID,E(k_temp,(request, pub_key,ticket))) -----------------&gt;          
+    #Here request would be /auth
+
+                                    &lt;-----------------         Acknowledgement
+                                                                &#34;Authenticated&#34;
+                                                                      or
+                                                              &#34;Not Authenticated&#34;
+
+    &#34;&#34;&#34;
+    self.s_CHAT = socket.socket()
+    self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+    packet=(&#34;/auth&#34;, self.public_key_pem,self.ticket)
+    print(&#34;ticket&#34;, self.ticket)
+    print(&#34;session key&#34;, self.K_temp)
+    packet_enc=self.encrypt(self.K_temp, packet)
+    packet_with_id=(self.id,packet_enc)
+    self.s_CHAT.send(pickle.dumps(packet_with_id))
+    response=self.s_CHAT.recv(4096)
+    if(response==&#34;Not Authenticated&#34;.encode()):
+        print(&#34;Unable to authenticate(chat server), exiting...&#34;)
+        self.disconnect()
+        exit()
+    else:
+        print(&#34;Authentication with chat server complete successfully&#34;)
+    self.disconnect()</code></pre>
+</details>
+</dd>
+<dt id="client.client.convert_to_key"><code class="name flex">
+<span>def <span class="ident">convert_to_key</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def convert_to_key(self, obj):
+    derived_password=pickle.dumps(obj)
+    kdf = PBKDF2HMAC(algorithm=hashes.SHA256, length=32, salt=b&#39;0&#39;, iterations=100000) #used to derive a key from password
+    key = base64.urlsafe_b64encode(kdf.derive(derived_password)) #encode as utf-8 encode instead of binary
+    return key</code></pre>
+</details>
+</dd>
+<dt id="client.client.create_group_request"><code class="name flex">
+<span>def <span class="ident">create_group_request</span></span>(<span>self, name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Request format: (ID, E(k_temp, ("/create_group", "name of the group" ,ticket)))
+Response format: E(k_temp, (group_id,"name of the group"))</p>
+<p>The dictionary self.group_members is updated with the the list
+self.group_members[group_id] = [self.id]</p>
+<p>After successful group creation a dpyDH.DiffieHellmanh is
+saved in self.groups as {<grp_id>: private_key}
+this key will be used for df key exchange.</p>
+<p>After DH key exchange the final key is saved in
+self.group_keys dictionary</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_group_request(self, name):
+    &#34;&#34;&#34;
+    Request format: (ID, E(k_temp, (&#34;/create_group&#34;, &#34;name of the group&#34; ,ticket)))
+    Response format: E(k_temp, (group_id,&#34;name of the group&#34;))
+
+    The dictionary self.group_members is updated with the the list
+    self.group_members[group_id] = [self.id]
+
+    After successful group creation a dpyDH.DiffieHellmanh is
+    saved in self.groups as {&lt;grp_id&gt;: private_key}
+    this key will be used for df key exchange.
+
+    After DH key exchange the final key is saved in
+    self.group_keys dictionary
+    &#34;&#34;&#34;
+    self.s_CHAT = socket.socket()
+    self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+    inner_packet=(&#34;/create_group&#34;, name,self.ticket)
+    inner_packet_enc=self.encrypt(self.K_temp,inner_packet)
+    outer_packet=(self.id,inner_packet_enc)
+    self.s_CHAT.send(pickle.dumps(outer_packet))
+    response=self.s_CHAT.recv(4096)
+    response_dec=self.decrypt(self.K_temp,response)
+    print(&#34;Group with id:&#34;,response_dec[0],&#34;and name:&#34;,response_dec[1],&#34;is created&#34;)
+    grp_id=int(response_dec[0])
+    self.group_members[grp_id] = [self.id]
+    self.groups[grp_id]=pyDH.DiffieHellman()
+
+    self.disconnect()</code></pre>
+</details>
+</dd>
+<dt id="client.client.debug"><code class="name flex">
+<span>def <span class="ident">debug</span></span>(<span>self, out_string)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def debug(self, out_string):
+    if self.debug_v:
+        print(&#34;[debug]&#34;,out_string)</code></pre>
+</details>
+</dd>
+<dt id="client.client.decrypt"><code class="name flex">
+<span>def <span class="ident">decrypt</span></span>(<span>self, key, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>decryption using furnet, which uses AES encryption</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def decrypt(self, key, obj):
+    &#34;&#34;&#34;
+    decryption using furnet, which uses AES encryption
+    &#34;&#34;&#34;
+    decryption_function=Fernet(key)
+    decrypted=pickle.loads(decryption_function.decrypt(obj))
+    return decrypted</code></pre>
+</details>
+</dd>
+<dt id="client.client.dh_key_xchange_request"><code class="name flex">
+<span>def <span class="ident">dh_key_xchange_request</span></span>(<span>self, group_id, to_client)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initial key exchange(if group_id not in self.group_keys.keys()):
+1) get DH object from self.groups[grp_id]
+2) get the public key of to_client
+3) derive the public key for DH and send it to to_client via server
+in the following format
+(
+self.ID,
+E(
+k_temp,
+(
+"/init_group_dhxchg".
+E(
+k_pub_to_client,
+my_public_key_DH
+),
+to_client,
+grp_id,
+ticket
+)
+)
+)
+4) The to_client will send it's public key via server in the followint format
+E(
+k_temp,
+(
+E(
+private_key_to_client,
+to_client_public_key_DH
+),
+E(
+my_public_key_DH,
+sha256(K)
+)
+)
+)
+5) calculate K and verify HMAC
+6) add key to self.group_keys</p>
+<p>Note: keys DH keys are always saved as integers, only while
+encrypting/decrypting they are converted to keys using
+self.convert_to_key()</p>
+<p>For second and later diffie hellman
+1) get the group key K from self.group_keys
+2) send K to to_client via server
+in the following format
+(
+self.ID,
+E(
+k_temp,
+(
+"/init_group_dhxchg".
+E(
+k_pub_to_client,
+g^K
+),
+to_client,
+grp_id,
+ticket
+)
+)
+)
+3) The to_client will send it's public key via server in the followint format
+E(
+k_temp,
+(
+E(
+private_key_to_client,
+to_client_public_key_DH
+),
+E(
+g^K,
+sha256(new_K)
+)
+)
+)
+4) calculate new K using to_client_public_key_DH^(K)=g^(K*U3) and verify HMAC
+5) Send new key to all the other members in the group in the following format
+(
+self.ID,
+E(
+k_temp,
+(
+"/update_df_key",
+E(
+K #old,
+new_K
+),
+uid,
+grp_id,
+ticket
+)
+)
+)
+6) add key to self.group_keys</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dh_key_xchange_request(self, group_id, to_client):
+    &#34;&#34;&#34;
+    Initial key exchange(if group_id not in self.group_keys.keys()):
+    1) get DH object from self.groups[grp_id]
+    2) get the public key of to_client
+    3) derive the public key for DH and send it to to_client via server 
+    in the following format
+        (
+            self.ID, 
+            E(
+                k_temp,
+                (
+                    &#34;/init_group_dhxchg&#34;.
+                    E(
+                        k_pub_to_client,
+                        my_public_key_DH
+                    ),
+                    to_client,
+                    grp_id,
+                    ticket
+                )
+            )
+        )
+    4) The to_client will send it&#39;s public key via server in the followint format
+        E(
+            k_temp,
+            (
+                E(
+                    private_key_to_client,
+                    to_client_public_key_DH
+                ),
+                E(
+                    my_public_key_DH,
+                    sha256(K)
+                )
+            )
+        )
+    5) calculate K and verify HMAC
+    6) add key to self.group_keys
+
+    Note: keys DH keys are always saved as integers, only while
+    encrypting/decrypting they are converted to keys using 
+    self.convert_to_key()
+
+    For second and later diffie hellman
+    1) get the group key K from self.group_keys
+    2) send K to to_client via server 
+    in the following format
+        (
+            self.ID, 
+            E(
+                k_temp,
+                (
+                    &#34;/init_group_dhxchg&#34;.
+                    E(
+                        k_pub_to_client,
+                        g^K
+                    ),
+                    to_client,
+                    grp_id,
+                    ticket
+                )
+            )
+        )
+    3) The to_client will send it&#39;s public key via server in the followint format
+        E(
+            k_temp,
+            (
+                E(
+                    private_key_to_client,
+                    to_client_public_key_DH
+                ),
+                E(
+                    g^K,
+                    sha256(new_K)
+                )
+            )
+        )
+    4) calculate new K using to_client_public_key_DH^(K)=g^(K*U3) and verify HMAC
+    5) Send new key to all the other members in the group in the following format
+        (
+            self.ID,
+            E(
+                k_temp,
+                (
+                    &#34;/update_df_key&#34;,
+                    E(
+                        K #old,
+                        new_K
+                    ),
+                    uid,
+                    grp_id,
+                    ticket
+                )
+            )
+        )
+    6) add key to self.group_keys
+    
+    &#34;&#34;&#34;
+    
+    if group_id not in self.group_keys.keys():
+        # 1) get DH object from self.groups[grp_id]
+        dh=self.groups[group_id]
+        p=dh.p
+        # 2) get the public key of to_client
+        print(&#34;I AM HERE YOU 1&#34;)
+        pub_key_to_client_pem=self.get_public_key_request(to_client)
+        print(&#34;PEM&#34;, pub_key_to_client_pem)
+        pub_key_to_client=self.pem_to_pub_key(pub_key_to_client_pem)
+        print(&#34;KEY:&#34;,pub_key_to_client)
+        my_pub_key_DH=dh.gen_public_key()
+        print(&#34;Idh public:&#34;,my_pub_key_DH)
+        #3)
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        to_send=(
+            self.id, 
+            self.encrypt(
+                self.K_temp,
+                (
+                    &#34;/init_group_dhxchg&#34;,
+                    self.public_key_encryption(
+                        pub_key_to_client,
+                        (my_pub_key_DH)
+                    ),
+                    to_client,
+                    group_id,
+                    self.ticket
+                )
+            )
+        )
+        print(&#34;Sending&#34;, to_send)
+        self.s_CHAT.send(pickle.dumps(to_send))
+        #4
+        response=self.s_CHAT.recv(4096)
+        response=self.decrypt(
+            self.K_temp,
+            response
+        )
+
+        to_client_public_DH=self.public_key_decryption(pub_key_to_client, response[0] )
+
+        DH_key=self.convert_to_key(my_pub_key_DH)
+        hashed_K=self.decrypt(DH_key, response[1])
+
+        #5
+        # pow(g^c2, c1)
+        K=pow(to_client_public_DH,dh.get_private_key(),dh.p)
+        my_hashed_K=self.hash(K)
+        if my_hashed_K!=hashed_K:
+            raise Exception(&#34;K hash not equal&#34;)
+        print(&#34;New key:&#34;,K)
+        self.group_keys[group_id]=K
+        self.disconnect()
+    else: 
+        
+        #1
+        old_K=self.group_keys[group_id]
+        # 2) get the public key of to_client
+        pub_key_to_client_pem=self.get_public_key_request(to_client)
+        pub_key_to_client=self.pem_to_pub_key(pub_key_to_client_pem)
+
+        global P
+        global g
+        my_pub_key_DH=pow(g,old_K,P)
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        #3)
+        to_send=(
+            self.id, 
+            self.encrypt(
+                self.K_temp,
+                (
+                    &#34;/init_group_dhxchg&#34;,
+                    self.public_key_encryption(
+                        pub_key_to_client,
+                        my_pub_key_DH
+                    ),
+                    to_client,
+                    group_id,
+                    self.ticket
+                )
+            )
+        )
+        self.s_CHAT.send(pickle.dumps(to_send))
+        #4
+        response=self.s_CHAT.recv(4096)
+        response=self.decrypt(
+            self.K_temp,
+            response
+        )
+        
+        to_client_public_DH=self.public_key_decryption(pub_key_to_client, response[0])
+
+        DH_key=self.convert_to_key(my_pub_key_DH)
+        hashed_K=self.decrypt(DH_key, response[1])
+
+        #5
+        # pow(g^c3, K)=g^(K*c3)
+        K_new=pow(to_client_public_DH,old_K,P)
+        my_hashed_K=self.hash(K_new)
+        if my_hashed_K!=hashed_K:
+            raise Exception(&#34;K hash not equal&#34;)
+        
+        self.disconnect()
+
+        # send updated key to all others in the group
+        for uid in self.group_members[group_id]:
+            print(&#34;DATA&#34;,uid, to_client)
+            if uid==self.id or int(uid)==int(to_client):
+                print(&#34;Not sending to&#34;,uid)
+                continue
+            print(&#34;Sending to&#34;,uid)
+
+            self.s_CHAT = socket.socket()
+            self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+            packet=(
+                self.id,
+                self.encrypt(
+                    self.K_temp,
+                    (
+                        &#34;/update_df_key&#34;,
+                        self.encrypt(
+                            self.convert_to_key(old_K),
+                            K_new,
+                        ),
+                        uid,
+                        group_id,
+                        self.ticket
+                    )
+                )
+            )
+            self.s_CHAT.send(pickle.dumps(packet))
+            self.disconnect()
+      
+        print(&#34;Updated key:&#34;,K_new)
+        
+        self.group_keys[group_id]=K_new</code></pre>
+</details>
+</dd>
+<dt id="client.client.disconnect"><code class="name flex">
+<span>def <span class="ident">disconnect</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def disconnect(self):
+    try:
+        self.s_KDC.close()
+        self.s_CHAT.close()
+    except:
+        pass</code></pre>
+</details>
+</dd>
+<dt id="client.client.encrypt"><code class="name flex">
+<span>def <span class="ident">encrypt</span></span>(<span>self, key, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>encrption using furnet, which uses AES encryption</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def encrypt(self, key, obj):
+    &#34;&#34;&#34;
+    encrption using furnet, which uses AES encryption
+    &#34;&#34;&#34;
+    encryption_function=Fernet(key)
+    encrypted=encryption_function.encrypt(pickle.dumps(obj))
+    return encrypted</code></pre>
+</details>
+</dd>
+<dt id="client.client.gen_session_key"><code class="name flex">
+<span>def <span class="ident">gen_session_key</span></span>(<span>self, K_c, TS, nonce)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Session key is the function of K_c, TS and nonce
+These values are hashed</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def gen_session_key(self, K_c, TS, nonce):
+    &#34;&#34;&#34;
+    Session key is the function of K_c, TS and nonce
+    These values are hashed
+    &#34;&#34;&#34;
+    derived_password=(str(K_c) + str(TS)).encode()
+    kdf = PBKDF2HMAC(algorithm=hashes.SHA256, length=32, salt=nonce, iterations=100000) #used to derive a key from password
+    key = base64.urlsafe_b64encode(kdf.derive(derived_password)) #encode as utf-8 encode instead of binary
+    return key</code></pre>
+</details>
+</dd>
+<dt id="client.client.get_public_key_request"><code class="name flex">
+<span>def <span class="ident">get_public_key_request</span></span>(<span>self, req_id)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Request format: (ID, E(k_temp, ("/request_public_key", req_id ,ticket)))
+Response: E(k_temp,("/send_public_key",publickey_pem) )
+return: public key pem</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_public_key_request(self, req_id):
+    &#34;&#34;&#34;
+    Request format: (ID, E(k_temp, (&#34;/request_public_key&#34;, req_id ,ticket)))
+    Response: E(k_temp,(&#34;/send_public_key&#34;,publickey_pem) )
+    return: public key pem
+    &#34;&#34;&#34;
+    self.s_CHAT = socket.socket()
+    self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+    inner=(&#34;/request_public_key&#34;, req_id, self.ticket)
+    inner_enc=self.encrypt(self.K_temp, inner)
+    print(&#34;inner: &#34;, inner_enc)
+    outer=pickle.dumps((self.id,inner_enc))
+    self.s_CHAT.send(outer)
+    response=self.s_CHAT.recv(4096)
+    if(response==&#34;Requested client not registered&#34;.encode()):
+        print(&#34;Error public key for client not found, returned None&#34;)
+        return None
+    response_dec=self.decrypt(self.K_temp, response)
+    self.disconnect()
+    return response_dec[1]</code></pre>
+</details>
+</dd>
+<dt id="client.client.group_invite_request"><code class="name flex">
+<span>def <span class="ident">group_invite_request</span></span>(<span>self, grp_id, client_id)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>requst format: (ID, E(k_temp, ("/group_invite", grp_id, client_id, ticket)))
+response: E(k_temp, ("/group_invite_accept",grp_id, accepted_client_id)) </p>
+<p>if the request is accepted then add the client to
+self.group_members[grp_id].append(client_id)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def group_invite_request(self, grp_id, client_id):
+    &#34;&#34;&#34;
+    requst format: (ID, E(k_temp, (&#34;/group_invite&#34;, grp_id, client_id, ticket)))
+    response: E(k_temp, (&#34;/group_invite_accept&#34;,grp_id, accepted_client_id)) 
+
+    if the request is accepted then add the client to 
+    self.group_members[grp_id].append(client_id)
+    &#34;&#34;&#34;
+    self.s_CHAT = socket.socket()
+    self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+
+    inner_packet= (&#34;/group_invite&#34;, grp_id, client_id,self.ticket)
+    inner_packet_enc=self.encrypt(self.K_temp, inner_packet)
+    outer_packet= (self.id, inner_packet_enc)
+    self.s_CHAT.send(pickle.dumps(outer_packet))
+
+    response=self.s_CHAT.recv(4096)
+    response_dec=self.decrypt(self.K_temp,response)
+    if response_dec[0]==&#34;/group_invite_accept&#34;:
+        print(&#34;Client:&#34;,response_dec[2],&#34;accepted the invite to the group&#34;, response_dec[1])
+        self.group_members[int(grp_id)].append(client_id)
+    elif response_dec==&#34;Not accepted&#34;:
+        print(&#34;Group invite not accepeted&#34;)
+    
+    self.disconnect()</code></pre>
+</details>
+</dd>
+<dt id="client.client.hash"><code class="name flex">
+<span>def <span class="ident">hash</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>generate hash of the object by
+first pickling it then using SHA256
+from hashes library and convert it to
+urlsafe b64 encoding</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hash(self, obj):
+    &#34;&#34;&#34;
+    generate hash of the object by
+    first pickling it then using SHA256
+    from hashes library and convert it to
+    urlsafe b64 encoding 
+    &#34;&#34;&#34;
+    obj_p=pickle.dumps(obj)
+    dig=hashes.Hash(hashes.SHA256())
+    dig.update(obj_p)
+    h=dig.finalize()
+    return base64.urlsafe_b64encode(h)</code></pre>
+</details>
+</dd>
+<dt id="client.client.pem_to_pub_key"><code class="name flex">
+<span>def <span class="ident">pem_to_pub_key</span></span>(<span>self, pem)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pem_to_pub_key(self, pem):
+    return serialization.load_pem_public_key(pem, backend=default_backend())</code></pre>
+</details>
+</dd>
+<dt id="client.client.private_key_decryption"><code class="name flex">
+<span>def <span class="ident">private_key_decryption</span></span>(<span>self, priv_key, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>performs rsa encryption using OAEP padding with SHA256 hash.
+OAEP: <a href="https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding">https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def private_key_decryption(self, priv_key, obj):
+    &#34;&#34;&#34;
+    performs rsa encryption using OAEP padding with SHA256 hash.
+    OAEP: https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
+    &#34;&#34;&#34;
+    try:
+        return pickle.loads(priv_key.decrypt(obj, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None)))
+    except:
+        return pickle.loads(obj)</code></pre>
+</details>
+</dd>
+<dt id="client.client.private_key_encryption"><code class="name flex">
+<span>def <span class="ident">private_key_encryption</span></span>(<span>self, priv_key, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>performs rsa signing using PSS padding with SHA256 hash.
+PSS: <a href="https://en.wikipedia.org/wiki/Probabilistic_signature_scheme">https://en.wikipedia.org/wiki/Probabilistic_signature_scheme</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def private_key_encryption(self, priv_key, obj):
+    &#34;&#34;&#34;
+    performs rsa signing using PSS padding with SHA256 hash.
+    PSS: https://en.wikipedia.org/wiki/Probabilistic_signature_scheme
+    &#34;&#34;&#34;
+    # return priv_key.sign(pickle.dumps(obj), padding.PSS(mgf=padding.MGF1(hashes.SHA256),salt_length=padding.PSS.MAX_LENGTH),hashes.SHA256())
+    # return priv_key.encrypt(pickle.dumps(obj), padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
+    return pickle.dumps(obj)</code></pre>
+</details>
+</dd>
+<dt id="client.client.public_key_decryption"><code class="name flex">
+<span>def <span class="ident">public_key_decryption</span></span>(<span>self, pub_key, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>performs rsa verification using PSS padding with SHA256 hash.
+PSS: <a href="https://en.wikipedia.org/wiki/Probabilistic_signature_scheme">https://en.wikipedia.org/wiki/Probabilistic_signature_scheme</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def public_key_decryption(self, pub_key, obj):
+    &#34;&#34;&#34;
+    performs rsa verification using PSS padding with SHA256 hash.
+    PSS: https://en.wikipedia.org/wiki/Probabilistic_signature_scheme
+    &#34;&#34;&#34;
+    # pub_key.recover_data_from_signature(sig,padding.PKCS1v15(),algorithm=hashes.SHA256())
+    # pub_key.verify(obj,to_verify,padding.PSS(mgf=padding.MGF1(hashes.SHA256()),salt_length=padding.PSS.MAX_LENGTH), hashes.SHA256)
+    # return pickle.loads(pub_key.decrypt(obj, padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None)))
+    return pickle.loads(obj)</code></pre>
+</details>
+</dd>
+<dt id="client.client.public_key_encryption"><code class="name flex">
+<span>def <span class="ident">public_key_encryption</span></span>(<span>self, pub_key, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>performs rsa encryption using OAEP padding with SHA256 hash.
+OAEP: <a href="https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding">https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def public_key_encryption(self, pub_key, obj):
+    &#34;&#34;&#34;
+    performs rsa encryption using OAEP padding with SHA256 hash.
+    OAEP: https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
+    &#34;&#34;&#34;
+    try:
+        return pub_key.encrypt(pickle.dumps(obj), padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()), algorithm=hashes.SHA256(), label=None))
+    except:
+        return pickle.dumps(obj)</code></pre>
+</details>
+</dd>
+<dt id="client.client.show_IRC_UI"><code class="name flex">
+<span>def <span class="ident">show_IRC_UI</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_IRC_UI(self):
+    while True:
+        total=input(&#34;&gt;&gt; &#34;)
+        total_split=total.split(&#34; &#34;)
+        comm=total_split[0]
+        if comm==&#34;exit&#34;:
+            break
+        elif comm==&#34;/who&#34;:
+            self.who_request()
+        elif comm==&#34;/write_all&#34;:
+            self.write_all_request(total[len(comm)+1:])
+        elif comm==&#34;/request_public_key&#34;:
+            print(self.get_public_key_request(total_split[1]))
+        elif comm==&#34;/create_group&#34;:
+            print(total_split[1])
+            self.create_group_request(total_split[1])
+        elif comm==&#34;/group_invite&#34;:
+            #format: /group_invite &lt;grp_id&gt; &lt;client_id&gt;
+            self.group_invite_request(total_split[1], total_split[2])
+        elif comm==&#34;/group_invite_accept&#34; :
+            self.accept_response=True
+        elif comm==&#34;/group_invite_decline&#34; :
+            self.accept_response=False
+        elif comm==&#34;/init_group_dhxchg&#34;:
+            #format: /init_group_dhxchg &lt;grp_id&gt; &lt;client_id&gt;
+            self.dh_key_xchange_request(int(total_split[1]),int(total_split[2]))
+        elif comm==&#34;/write_group&#34;:
+            #format /write_group &lt;group&gt; &lt;message&gt;
+            self.write_group_request(total_split[1],total_split[2])</code></pre>
+</details>
+</dd>
+<dt id="client.client.start_listening"><code class="name flex">
+<span>def <span class="ident">start_listening</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>receives the forwarded message from server.
+message originated at indivisual clients</p>
+<p>for a /write_all: ("/write_all", E(pub_key, (from,message)))</p>
+<p>for a /group_invite: ("/group_invite",E(session_key_to, (from_client, group_id)))
+after a successful invite acceptance, a pyDH.DiffieHellman object is
+added to self.groups[group_id] dictionary. Final key will be saved in
+self.group_keys after successful DH key xchange</p>
+<p>for a "/init_group_dhxchg":
+recv format:
+(
+"/init_group_dhxchg",
+E(
+k_temp_to,
+(
+E(
+k_pub_this,
+others_public_key_DH
+),
+from_client,
+group_id
+)
+)
+)</p>
+<pre><code>send format:
+    E(
+        k_temp,
+        (
+            E(
+                private_key_this_client,
+                this_client_public_key_DH
+            ),
+            E(
+                K,
+                sha256(new_K)
+            )
+        )
+    )
+</code></pre>
+<p>for "/update_df_key" request:
+(
+"/update_df_key",
+E(
+k_temp_to,
+(
+E(
+K #old,
+new_K
+),
+from_client,
+group_id
+)
+)
+)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def start_listening(self):
+    &#34;&#34;&#34;
+    receives the forwarded message from server.
+    message originated at indivisual clients
+
+    for a /write_all: (&#34;/write_all&#34;, E(pub_key, (from,message)))
+
+    for a /group_invite: (&#34;/group_invite&#34;,E(session_key_to, (from_client, group_id)))
+        after a successful invite acceptance, a pyDH.DiffieHellman object is
+        added to self.groups[group_id] dictionary. Final key will be saved in
+        self.group_keys after successful DH key xchange
+
+    for a &#34;/init_group_dhxchg&#34;:
+        recv format:
+            (
+                &#34;/init_group_dhxchg&#34;,
+                E(
+                    k_temp_to,
+                    (
+                        E(
+                            k_pub_this,
+                            others_public_key_DH
+                        ),
+                        from_client,
+                        group_id
+                    )
+                )
+            )
+        
+        send format:
+            E(
+                k_temp,
+                (
+                    E(
+                        private_key_this_client,
+                        this_client_public_key_DH
+                    ),
+                    E(
+                        K,
+                        sha256(new_K)
+                    )
+                )
+            )
+        
+    for &#34;/update_df_key&#34; request:
+        (
+            &#34;/update_df_key&#34;,
+            E(
+                k_temp_to,
+                (
+                    E(
+                        K #old,
+                        new_K
+                    ),
+                    from_client,
+                    group_id
+                )
+            )
+        )
+
+    &#34;&#34;&#34;
+    print(&#34;Listening Started&#34;)
+    self.s = socket.socket()
+    self.s.bind((&#39;&#39;,int(self.listening_port)))
+
+    
+    self.s.listen(1)
+    
+    while True:
+        self.conn,self.addr = self.s.accept()
+        server_message=pickle.loads(self.conn.recv(4096))
+        print(&#34;Server message&#34;,server_message)
+        print(&#34;&#34;)
+        print(server_message[0])
+        if(server_message[0]==&#34;/write_all&#34;):
+            message=self.private_key_decryption(self.private_key,server_message[1])
+            from_=message[0]
+            message_text=message[1]
+            print(&#34;Received from&#34;,from_,&#34;:&#34;,message[1])
+        elif server_message[0]==&#34;/group_invite&#34;:
+            inner_dec=self.decrypt(self.K_temp,server_message[1])
+            print(&#34;Got a group request from&#34;,inner_dec[0],&#34;for group &#34;,inner_dec[1])
+            print(&#34;Sending auto response to accept response:&#34;,self.accept_response)
+           
+            if self.accept_response:
+                packet=self.encrypt(self.K_temp,&#34;/group_invite_accept&#34;)
+                self.conn.send(packet)
+                self.groups[int(inner_dec[1])]=pyDH.DiffieHellman()
+            else:
+                packet=self.encrypt(self.K_temp,&#34;/Not accepted&#34;)
+                self.conn.send(packet)
+        elif server_message[0]==&#34;/init_group_dhxchg&#34;:
+            inner_dec=self.decrypt(self.K_temp,server_message[1])
+            group_id=int(inner_dec[2])
+            from_id=int(inner_dec[1])
+            mess=inner_dec[0]
+
+            dh=self.groups[group_id]
+            other_public_dh=self.private_key_decryption(self.private_key, mess)
+            p=P
+
+            #pow(g^c2, c1,p)=g^(c2*c1)mod(p)
+            K=pow(other_public_dh,dh.get_private_key(), P)
+            response=(
+                self.private_key_encryption(self.private_key,dh.gen_public_key()),
+                self.encrypt(
+                    self.convert_to_key(other_public_dh),
+                    self.hash(K)
+                )
+            )
+            response_enc=self.encrypt(self.K_temp,response)
+            self.conn.send(response_enc)
+            print(&#34;Generated key: &#34;, K)
+            self.group_keys[group_id]=K                    
+        elif server_message[0]==&#34;/update_df_key&#34;:
+            inner_dec=self.decrypt(self.K_temp,server_message[1])
+            group_id=int(inner_dec[2])
+            mess=inner_dec[0]
+            if group_id in self.group_keys.keys():
+                old_key=self.group_keys[group_id]
+                print(&#34;OLD KEY&#34;, old_key)
+                new_key=self.decrypt(self.convert_to_key(old_key),mess)
+                print(&#34;New key: &#34;, new_key)
+                self.group_keys[group_id]=new_key
+        elif server_message[0]==&#34;/write_group&#34;:
+            inner_dec=self.decrypt(self.K_temp,server_message[1])
+            K=self.group_keys[inner_dec[1]]
+            mess_dec=self.decrypt(self.convert_to_key(K),inner_dec[0])
+            print(&#34;Message from group&#34;,inner_dec[1],&#34;:&#34;,mess_dec)
+        else:
+            pass
+        self.conn.close()</code></pre>
+</details>
+</dd>
+<dt id="client.client.who_request"><code class="name flex">
+<span>def <span class="ident">who_request</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def who_request(self):
+    print(&#34;who response: &#34;)
+    self.s_CHAT = socket.socket()
+    self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+    req=self.encrypt(self.K_temp,(&#34;/who&#34;,self.ticket))
+    tosend=pickle.dumps((self.id,req))
+    self.s_CHAT.send(tosend)
+    response=self.decrypt(self.K_temp,self.s_CHAT.recv(4096))
+    print(response)
+    self.disconnect()
+    return response</code></pre>
+</details>
+</dd>
+<dt id="client.client.write_all_request"><code class="name flex">
+<span>def <span class="ident">write_all_request</span></span>(<span>self, message)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>1) get the list of connected clients
+2) get the public keys of those clients
+3) encrypt the message with public keys
+and send to all connected</p>
+<p>The sent message would be in the following format:
+(
+self.id,
+E(
+k_temp,
+(
+"/write_all",
+send_to_id,
+E(pub_key,(from,message)),
+ticket
+)
+)
+)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_all_request(self, message):
+    &#34;&#34;&#34;
+    1) get the list of connected clients
+    2) get the public keys of those clients
+    3) encrypt the message with public keys 
+        and send to all connected
+
+    The sent message would be in the following format:
+    (   self.id, 
+        E(
+            k_temp,
+            (
+                &#34;/write_all&#34;,
+                send_to_id,
+                E(pub_key,(from,message)),
+                ticket
+            )
+        )
+    )
+    &#34;&#34;&#34;
+    client_list=self.who_request()
+    for id in client_list:
+        print(&#34;condition: &#34;,id!=self.id)
+        print(id, self.id)
+        if(id!=self.id):
+            pem=self.get_public_key_request(id)
+            self.s_CHAT = socket.socket()
+            self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+    
+            
+            pub_key=self.pem_to_pub_key(pem)
+            enc_message=self.public_key_encryption(pub_key,(self.id,message))
+            inner_packet=(&#34;/write_all&#34;,id,enc_message,self.ticket)
+            inner_enc=self.encrypt(self.K_temp,inner_packet)
+            complete_packet=(self.id, inner_enc)
+            print(complete_packet)
+            packet_pickled=pickle.dumps(complete_packet)
+            print(packet_pickled)
+            self.s_CHAT.send(packet_pickled)
+
+            self.disconnect()</code></pre>
+</details>
+</dd>
+<dt id="client.client.write_group_request"><code class="name flex">
+<span>def <span class="ident">write_group_request</span></span>(<span>self, group_id, message)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Send the request to all the client in the
+group via server. In the following format:
+(
+self.id
+E(
+k_temp,
+(
+"/write_group",
+E(
+K, #from dh
+message
+),
+to_client,
+group_id
+self.ticket
+)
+)
+)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_group_request(self, group_id,message):
+    &#34;&#34;&#34;
+    Send the request to all the client in the
+    group via server. In the following format:
+    (
+        self.id
+        E(
+            k_temp,
+            (
+                &#34;/write_group&#34;,
+                E(
+                    K, #from dh
+                    message
+                ),
+                to_client,
+                group_id
+                self.ticket
+            )
+        )
+    )
+    &#34;&#34;&#34;
+    group_id=int(group_id)
+    K=self.group_keys[group_id]
+    for uid in self.group_members[group_id]:
+        to_send=(
+            self.id,
+            self.encrypt(
+                self.K_temp,
+                (
+                    &#34;/write_group&#34;,
+                    self.encrypt(
+                        self.convert_to_key(K), #from dh
+                        message
+                    ),
+                    uid,
+                    group_id,   
+                    self.ticket
+                )
+            )
+        )
+        self.s_CHAT = socket.socket()
+        self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
+        self.s_CHAT.send(pickle.dumps(to_send))
+
+        self.disconnect()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="client.loadData" href="#client.loadData">loadData</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="client.client" href="#client.client">client</a></code></h4>
+<ul class="">
+<li><code><a title="client.client.authenticate" href="#client.client.authenticate">authenticate</a></code></li>
+<li><code><a title="client.client.connet_to_chat_server" href="#client.client.connet_to_chat_server">connet_to_chat_server</a></code></li>
+<li><code><a title="client.client.convert_to_key" href="#client.client.convert_to_key">convert_to_key</a></code></li>
+<li><code><a title="client.client.create_group_request" href="#client.client.create_group_request">create_group_request</a></code></li>
+<li><code><a title="client.client.debug" href="#client.client.debug">debug</a></code></li>
+<li><code><a title="client.client.decrypt" href="#client.client.decrypt">decrypt</a></code></li>
+<li><code><a title="client.client.dh_key_xchange_request" href="#client.client.dh_key_xchange_request">dh_key_xchange_request</a></code></li>
+<li><code><a title="client.client.disconnect" href="#client.client.disconnect">disconnect</a></code></li>
+<li><code><a title="client.client.encrypt" href="#client.client.encrypt">encrypt</a></code></li>
+<li><code><a title="client.client.gen_session_key" href="#client.client.gen_session_key">gen_session_key</a></code></li>
+<li><code><a title="client.client.get_public_key_request" href="#client.client.get_public_key_request">get_public_key_request</a></code></li>
+<li><code><a title="client.client.group_invite_request" href="#client.client.group_invite_request">group_invite_request</a></code></li>
+<li><code><a title="client.client.hash" href="#client.client.hash">hash</a></code></li>
+<li><code><a title="client.client.pem_to_pub_key" href="#client.client.pem_to_pub_key">pem_to_pub_key</a></code></li>
+<li><code><a title="client.client.private_key_decryption" href="#client.client.private_key_decryption">private_key_decryption</a></code></li>
+<li><code><a title="client.client.private_key_encryption" href="#client.client.private_key_encryption">private_key_encryption</a></code></li>
+<li><code><a title="client.client.public_key_decryption" href="#client.client.public_key_decryption">public_key_decryption</a></code></li>
+<li><code><a title="client.client.public_key_encryption" href="#client.client.public_key_encryption">public_key_encryption</a></code></li>
+<li><code><a title="client.client.show_IRC_UI" href="#client.client.show_IRC_UI">show_IRC_UI</a></code></li>
+<li><code><a title="client.client.start_listening" href="#client.client.start_listening">start_listening</a></code></li>
+<li><code><a title="client.client.who_request" href="#client.client.who_request">who_request</a></code></li>
+<li><code><a title="client.client.write_all_request" href="#client.client.write_all_request">write_all_request</a></code></li>
+<li><code><a title="client.client.write_group_request" href="#client.client.write_group_request">write_group_request</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

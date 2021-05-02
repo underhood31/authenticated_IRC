@@ -235,6 +235,35 @@ class chat_server:
        
         s_client.close()
 
+    def write_group_req_handler(self, to_client, group_id, message):
+        """
+        forwards the group message by encrypting it with k_temp
+        of to_client.
+        (
+            "/write_group",
+            E(
+                k_temp,
+                (
+                    message,
+                    group_id
+                )
+            )
+        )
+        
+        """
+        to_client=int(to_client)
+        k_temp_to=self.database.get_session_key(to_client)
+        to_send=self.encrypt(k_temp_to,(message,group_id))
+        to_send=("/write_group",to_send)
+        details=self.database.client_listen_details[int(to_client)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        s_client.send(pickle.dumps(to_send))
+        s_client.close()
+
+
     def request_handler(self, request):
         """
         The format of any request will be (client_id, E(K_temp,(request_type, ...arguements..., ticket)))
@@ -283,6 +312,8 @@ class chat_server:
             self.df_xchg_handler(client_id,client_K_temp,arguements_decrypted[2],arguements_decrypted[3],arguements_decrypted[1])
         elif req_type=="/update_df_key":
             self.df_update_key(client_id,arguements_decrypted[2],arguements_decrypted[1],arguements_decrypted[3])
+        elif req_type=="/write_group":
+            self.write_group_req_handler(arguements_decrypted[2],arguements_decrypted[3],arguements_decrypted[1])
         
         
 
