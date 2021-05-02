@@ -68,10 +68,12 @@ class chat_server:
             
     def write_all_request_handler(self, write_to, message):
         """
+        ```
         1) get the listen port of the client
         2) send the packet to the client
         packet would be sent in the following format:
         ("/write_all", E(pub_key, (from_id,message)))
+        ```
         """
         details=self.database.client_listen_details[int(write_to)]
         port=details[1]
@@ -84,9 +86,11 @@ class chat_server:
 
     def request_public_key_handler(self, session_key,required_id):
         """
+        ```
         send the public qey of the required client. The format
         of the response is:
         E(session_key,("/send_public_key",public_key_pem))
+        ```
         """
         if required_id in self.registered_clients:
             key=self.encrypt(session_key,("/send_public_key",self.registered_clients[required_id]))
@@ -97,11 +101,13 @@ class chat_server:
 
     def create_group_request_handler(self, session_key,creator_id, name):
         """
+        ```
         A list containing the id of the group creator
         is created in the self.groups dictionary
         with the id = max(id) + 1
         return packet is in the format:
         E(session_key,(id,"name of the group"))
+        ```
         """
         id=None
         if(len(self.groups.keys())==0):
@@ -115,6 +121,7 @@ class chat_server:
     
     def group_invite_request_handler(self, from_client, k_temp_from , to_client, group_id):
         """
+        ```
         Send a request to to_client and listen for
         response, and pass the response to 
         from client.
@@ -133,6 +140,7 @@ class chat_server:
              E(session_key_from, ("/group_invite_accept",grp_id, accepted_client_id)) 
              OR
              E(session_key_from, "Not accepted" ) 
+        ```
         """
         from_client=int(from_client)
         to_client=int(to_client)
@@ -166,6 +174,7 @@ class chat_server:
     
     def df_xchg_handler(self, from_client, k_temp_from, to_client, group_id, request):
         """
+        ```
         1) Get the request from from_client and send to to_client in the following format
             (
                 "/init_group_dhxchg",
@@ -184,6 +193,7 @@ class chat_server:
                 k_temp_from,
                 reply,
             )
+        ```
         """
         k_temp_to=self.database.get_session_key(to_client)
         inner_packet=(request, from_client, group_id)
@@ -205,6 +215,7 @@ class chat_server:
 
     def df_update_key(self, from_client, to_client, request, group_id):
         """
+        ```
         1) Get the request from from_client and send to to_client in the following format
             (
                 "/update_df_key",
@@ -217,6 +228,7 @@ class chat_server:
                     )
                 )
             )
+        ```
         """
         to_client=int(to_client)
         from_client=int(from_client)
@@ -237,6 +249,7 @@ class chat_server:
 
     def write_group_req_handler(self, to_client, group_id, message):
         """
+        ```
         forwards the group message by encrypting it with k_temp
         of to_client.
         (
@@ -250,6 +263,7 @@ class chat_server:
             )
         )
         
+        ```
         """
         to_client=int(to_client)
         k_temp_to=self.database.get_session_key(to_client)
@@ -266,11 +280,13 @@ class chat_server:
 
     def request_handler(self, request):
         """
+        ```
         The format of any request will be (client_id, E(K_temp,(request_type, ...arguements..., ticket)))
 
         eg. 
 
         Authentication request: (ID, E(K_temp,("/auth",ticket)))
+        ```
         """
         self.debug("Client request bin: " + str(request))
         request_decoded=pickle.loads(request)

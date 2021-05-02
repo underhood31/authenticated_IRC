@@ -58,6 +58,7 @@ class kdc_server:
 
     def authenticate(self,cleint_request):
         """
+        ```
         Prereq: kdc and client will have a preshared key(K_c)
 
         KDC                                                        Client
@@ -67,6 +68,7 @@ class kdc_server:
         ticket=gen_ticket()
 
         E(K_c, (E(K_temp, Ticket), Nonce, TS2))    ------------------>         
+        ```
         """
         ID_client,TS1=pickle.loads(cleint_request)
         self.log("Processing request from client "+str(ID_client))

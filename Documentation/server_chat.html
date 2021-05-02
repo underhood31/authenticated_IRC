@@ -1,0 +1,1359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>chat API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>chat</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import socket, pickle
+from cryptography.fernet import Fernet
+from cryptography.hazmat.primitives import serialization
+class chat_server:
+
+    def __init__(self, database, verb=False, debug=False, port=10002):
+        self.verbose=verb
+        self.debug_v=debug
+        self.port=port
+        self.database=database
+        #{client_id:public_key_pem}
+        self.registered_clients={}
+        self.groups={}
+        self.group_names={}
+
+    def log(self, out_string):
+        if self.verbose:
+            print(&#34;[Chat server]&#34;,out_string)
+
+    def debug(self, out_string):
+        if self.debug_v:
+            print(&#34;[Chat server][debug]&#34;,out_string)
+
+    def decrypt(self, key, obj):
+        &#34;&#34;&#34;
+        decryption using furnet, which uses AES encryption
+        &#34;&#34;&#34;
+        decryption_function=Fernet(key)
+        decrypted=pickle.loads(decryption_function.decrypt(obj))
+        return decrypted
+
+    def encrypt(self, key, obj):
+        &#34;&#34;&#34;
+        encrption using furnet, which uses AES encryption
+        &#34;&#34;&#34;
+        encryption_function=Fernet(key)
+        encrypted=encryption_function.encrypt(pickle.dumps(obj))
+        return encrypted
+
+    def auth_request_handler(self, client_id, public_key):
+            &#34;&#34;&#34;
+            if this function is called then the key and ticket has
+            been verified, add this client to the set of
+            registered client and send ack.
+            &#34;&#34;&#34;
+            self.conn.send(&#34;Authenticated&#34;.encode())
+            self.log(str(client_id)+&#34; authenticated!&#34;)
+            
+            self.debug(&#34;cllient &#34;+ str(client_id) + &#34;public key : &#34; + str(public_key))
+            #add to the list of registered clients
+            self.registered_clients[client_id]=public_key
+    
+    def who_request_handler(self, client_id, k_temp):
+        &#34;&#34;&#34;
+        Force client to call /auth first so that they could
+        be added to the set of registered clients.
+        Send the list of all registered clients encrypted by k_temp.
+        &#34;&#34;&#34;
+        self.debug(&#34;Handling who reqeust from &#34;+str(client_id))
+        if client_id not in self.registered_clients:
+            self.conn.send(&#34;Please authenticate first&#34;.encode())
+        else:
+            send_packet=self.encrypt(k_temp,tuple(self.registered_clients))
+            self.debug(str(send_packet))
+            self.debug(self.decrypt(k_temp,send_packet))
+            self.debug(&#34;k_temp &#34;+str(k_temp))
+            self.conn.send(send_packet)
+            
+    def write_all_request_handler(self, write_to, message):
+        &#34;&#34;&#34;
+        ```
+        1) get the listen port of the client
+        2) send the packet to the client
+        packet would be sent in the following format:
+        (&#34;/write_all&#34;, E(pub_key, (from_id,message)))
+        ```
+        &#34;&#34;&#34;
+        details=self.database.client_listen_details[int(write_to)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        packet=(&#34;/write_all&#34;, message)
+        s_client.send(pickle.dumps(packet))
+        s_client.close()
+
+    def request_public_key_handler(self, session_key,required_id):
+        &#34;&#34;&#34;
+        ```
+        send the public qey of the required client. The format
+        of the response is:
+        E(session_key,(&#34;/send_public_key&#34;,public_key_pem))
+        ```
+        &#34;&#34;&#34;
+        if required_id in self.registered_clients:
+            key=self.encrypt(session_key,(&#34;/send_public_key&#34;,self.registered_clients[required_id]))
+            self.conn.send(key)
+        else:
+            self.conn.send(&#34;Requested client not registered&#34;.encode())
+
+
+    def create_group_request_handler(self, session_key,creator_id, name):
+        &#34;&#34;&#34;
+        ```
+        A list containing the id of the group creator
+        is created in the self.groups dictionary
+        with the id = max(id) + 1
+        return packet is in the format:
+        E(session_key,(id,&#34;name of the group&#34;))
+        ```
+        &#34;&#34;&#34;
+        id=None
+        if(len(self.groups.keys())==0):
+            id=0
+        else:
+            id=max(self.groups.keys())+1
+        self.groups[id]=[creator_id]
+        self.group_names[id]=name
+        packet=self.encrypt(session_key,(id,name))
+        self.conn.send(packet)
+    
+    def group_invite_request_handler(self, from_client, k_temp_from , to_client, group_id):
+        &#34;&#34;&#34;
+        ```
+        Send a request to to_client and listen for
+        response, and pass the response to 
+        from client.
+
+        If the to_client accept the invite, add it to the 
+        self.groups[group_id] list
+
+        Packet format to to_client: 
+            (&#34;/group_invite&#34;,E(session_key_to, (from_client, group_id)))
+        Response format from to_client:
+            E(session_key_to,&#34;/group_invite_accept&#34;)
+            OR
+            E(session_key_to, &#34;Not accepted&#34;)
+        
+        Response to from_client
+             E(session_key_from, (&#34;/group_invite_accept&#34;,grp_id, accepted_client_id)) 
+             OR
+             E(session_key_from, &#34;Not accepted&#34; ) 
+        ```
+        &#34;&#34;&#34;
+        from_client=int(from_client)
+        to_client=int(to_client)
+        group_id=int(group_id)
+
+        k_temp_to=self.database.get_session_key(to_client)
+        packet_to = (from_client, group_id)
+        packet_to_enc=self.encrypt(k_temp_to, packet_to)
+        packet_to=pickle.dumps((&#34;/group_invite&#34;,packet_to_enc))
+        
+        details=self.database.client_listen_details[int(to_client)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        s_client.send(packet_to)
+        response=s_client.recv(4096)
+
+        s_client.close()
+        response_dec=self.decrypt(k_temp_to,response)
+        if response_dec==&#34;/group_invite_accept&#34;:
+            self.groups[int(group_id)].append(int(to_client))
+            self.log(&#34;Client &#34;+str(to_client)+&#34; added to group &#34;+str(group_id))
+            packet_from=(&#34;/group_invite_accept&#34;,group_id, to_client)
+            packet_from_enc=self.encrypt(k_temp_from,packet_from)
+            self.conn.send(packet_from_enc)
+        else:
+            packet_from=&#34;Not accepted&#34;
+            packet_from_enc=self.encrypt(k_temp_from,packet_from)
+            self.conn.send(packet_from_enc)
+    
+    def df_xchg_handler(self, from_client, k_temp_from, to_client, group_id, request):
+        &#34;&#34;&#34;
+        ```
+        1) Get the request from from_client and send to to_client in the following format
+            (
+                &#34;/init_group_dhxchg&#34;,
+                E(
+                    k_temp_to,
+                    (
+                        request,
+                        from_client,
+                        group_id
+                    )
+                )
+            )
+        2) Listen for reply from from_client and send it to to_client in the 
+        following format
+            E(
+                k_temp_from,
+                reply,
+            )
+        ```
+        &#34;&#34;&#34;
+        k_temp_to=self.database.get_session_key(to_client)
+        inner_packet=(request, from_client, group_id)
+        inner_packet_enc=self.encrypt(k_temp_to,inner_packet)
+        outer_packet=(&#34;/init_group_dhxchg&#34;,inner_packet_enc)
+        details=self.database.client_listen_details[int(to_client)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        s_client.send(pickle.dumps(outer_packet))
+        
+        response=s_client.recv(4096)
+        response_dec=self.decrypt(k_temp_to,response)
+        s_client.close()
+
+        response_enc_to=self.encrypt(k_temp_from,response_dec)
+        self.conn.send(response_enc_to)
+
+    def df_update_key(self, from_client, to_client, request, group_id):
+        &#34;&#34;&#34;
+        ```
+        1) Get the request from from_client and send to to_client in the following format
+            (
+                &#34;/update_df_key&#34;,
+                E(
+                    k_temp_to,
+                    (
+                        request,
+                        from_client,
+                        group_id
+                    )
+                )
+            )
+        ```
+        &#34;&#34;&#34;
+        to_client=int(to_client)
+        from_client=int(from_client)
+        group_id=int(group_id)
+        k_temp_to=self.database.get_session_key(to_client)
+        inner_packet=(request, from_client,group_id)
+        inner_packet_enc=self.encrypt(k_temp_to,inner_packet)
+        outer_packet=(&#34;/update_df_key&#34;, inner_packet_enc)
+        details=self.database.client_listen_details[int(to_client)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        s_client.send(pickle.dumps(outer_packet))
+        
+       
+        s_client.close()
+
+    def write_group_req_handler(self, to_client, group_id, message):
+        &#34;&#34;&#34;
+        ```
+        forwards the group message by encrypting it with k_temp
+        of to_client.
+        (
+            &#34;/write_group&#34;,
+            E(
+                k_temp,
+                (
+                    message,
+                    group_id
+                )
+            )
+        )
+        
+        ```
+        &#34;&#34;&#34;
+        to_client=int(to_client)
+        k_temp_to=self.database.get_session_key(to_client)
+        to_send=self.encrypt(k_temp_to,(message,group_id))
+        to_send=(&#34;/write_group&#34;,to_send)
+        details=self.database.client_listen_details[int(to_client)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        s_client.send(pickle.dumps(to_send))
+        s_client.close()
+
+
+    def request_handler(self, request):
+        &#34;&#34;&#34;
+        ```
+        The format of any request will be (client_id, E(K_temp,(request_type, ...arguements..., ticket)))
+
+        eg. 
+
+        Authentication request: (ID, E(K_temp,(&#34;/auth&#34;,ticket)))
+        ```
+        &#34;&#34;&#34;
+        self.debug(&#34;Client request bin: &#34; + str(request))
+        request_decoded=pickle.loads(request)
+        client_id=int(request_decoded[0])
+        self.log(&#34;got request from client: &#34; + str(client_id))
+        client_K_temp=self.database.get_session_key(client_id)
+        self.debug(&#34;client k_temp: &#34; + str(client_K_temp))
+        client_ticket=self.database.get_ticket(client_id)
+        self.debug(&#34;decoded request&#34; + str(request_decoded))
+        arguements_decrypted=self.decrypt(client_K_temp, request_decoded[1])
+        req_type=arguements_decrypted[0]
+        self.debug(&#34;rec arguement:&#34; + str(arguements_decrypted) )
+        ticket_received=arguements_decrypted[-1]
+        self.debug(&#34;Received ticket: &#34; + str(ticket_received))
+        self.debug(&#34;Stored ticket:   &#34; + str(client_ticket))
+        if ticket_received!=client_ticket:
+            self.conn.send(&#34;Not Authenticated&#34;.encode())
+            self.log(&#34;Client &#34; + str(client_id) + &#34; cannot be authenticated&#34;)
+            return None
+        self.log(req_type)
+        if req_type==&#34;/auth&#34;:
+            pub_key=arguements_decrypted[1]
+            self.auth_request_handler(client_id,pub_key)
+        elif req_type==&#34;/who&#34;:
+            self.who_request_handler(client_id, client_K_temp)
+        elif req_type==&#34;/write_all&#34;:
+            self.write_all_request_handler(arguements_decrypted[1],arguements_decrypted[2])
+        elif req_type==&#34;/create_group&#34;:
+            self.create_group_request_handler(client_K_temp,client_id,arguements_decrypted[1])
+        elif req_type==&#34;/group_invite&#34;:
+            self.group_invite_request_handler(client_id,client_K_temp,arguements_decrypted[2],arguements_decrypted[1])
+        elif req_type==&#34;/request_public_key&#34;:
+            response_id=int(client_id)
+            req_id=int(arguements_decrypted[1])
+            self.request_public_key_handler(client_K_temp,req_id)
+        elif req_type==&#34;/send_public_key&#34;:
+            pass
+        elif req_type==&#34;/init_group_dhxchg&#34;:
+            self.df_xchg_handler(client_id,client_K_temp,arguements_decrypted[2],arguements_decrypted[3],arguements_decrypted[1])
+        elif req_type==&#34;/update_df_key&#34;:
+            self.df_update_key(client_id,arguements_decrypted[2],arguements_decrypted[1],arguements_decrypted[3])
+        elif req_type==&#34;/write_group&#34;:
+            self.write_group_req_handler(arguements_decrypted[2],arguements_decrypted[3],arguements_decrypted[1])
+        
+        
+
+    def run(self):
+        self.log(&#34;running&#34;)
+
+        self.s = socket.socket()
+        self.s.bind((&#39;&#39;,self.port))
+
+        
+        self.s.listen(10)
+        self.log(&#34;Listening on port &#34;+str(self.port))
+
+        while True:
+            self.conn,self.addr = self.s.accept()
+            client_request=self.conn.recv(4096)
+            self.request_handler(client_request)
+
+            self.conn.close()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="chat.chat_server"><code class="flex name class">
+<span>class <span class="ident">chat_server</span></span>
+<span>(</span><span>database, verb=False, debug=False, port=10002)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class chat_server:
+
+    def __init__(self, database, verb=False, debug=False, port=10002):
+        self.verbose=verb
+        self.debug_v=debug
+        self.port=port
+        self.database=database
+        #{client_id:public_key_pem}
+        self.registered_clients={}
+        self.groups={}
+        self.group_names={}
+
+    def log(self, out_string):
+        if self.verbose:
+            print(&#34;[Chat server]&#34;,out_string)
+
+    def debug(self, out_string):
+        if self.debug_v:
+            print(&#34;[Chat server][debug]&#34;,out_string)
+
+    def decrypt(self, key, obj):
+        &#34;&#34;&#34;
+        decryption using furnet, which uses AES encryption
+        &#34;&#34;&#34;
+        decryption_function=Fernet(key)
+        decrypted=pickle.loads(decryption_function.decrypt(obj))
+        return decrypted
+
+    def encrypt(self, key, obj):
+        &#34;&#34;&#34;
+        encrption using furnet, which uses AES encryption
+        &#34;&#34;&#34;
+        encryption_function=Fernet(key)
+        encrypted=encryption_function.encrypt(pickle.dumps(obj))
+        return encrypted
+
+    def auth_request_handler(self, client_id, public_key):
+            &#34;&#34;&#34;
+            if this function is called then the key and ticket has
+            been verified, add this client to the set of
+            registered client and send ack.
+            &#34;&#34;&#34;
+            self.conn.send(&#34;Authenticated&#34;.encode())
+            self.log(str(client_id)+&#34; authenticated!&#34;)
+            
+            self.debug(&#34;cllient &#34;+ str(client_id) + &#34;public key : &#34; + str(public_key))
+            #add to the list of registered clients
+            self.registered_clients[client_id]=public_key
+    
+    def who_request_handler(self, client_id, k_temp):
+        &#34;&#34;&#34;
+        Force client to call /auth first so that they could
+        be added to the set of registered clients.
+        Send the list of all registered clients encrypted by k_temp.
+        &#34;&#34;&#34;
+        self.debug(&#34;Handling who reqeust from &#34;+str(client_id))
+        if client_id not in self.registered_clients:
+            self.conn.send(&#34;Please authenticate first&#34;.encode())
+        else:
+            send_packet=self.encrypt(k_temp,tuple(self.registered_clients))
+            self.debug(str(send_packet))
+            self.debug(self.decrypt(k_temp,send_packet))
+            self.debug(&#34;k_temp &#34;+str(k_temp))
+            self.conn.send(send_packet)
+            
+    def write_all_request_handler(self, write_to, message):
+        &#34;&#34;&#34;
+        ```
+        1) get the listen port of the client
+        2) send the packet to the client
+        packet would be sent in the following format:
+        (&#34;/write_all&#34;, E(pub_key, (from_id,message)))
+        ```
+        &#34;&#34;&#34;
+        details=self.database.client_listen_details[int(write_to)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        packet=(&#34;/write_all&#34;, message)
+        s_client.send(pickle.dumps(packet))
+        s_client.close()
+
+    def request_public_key_handler(self, session_key,required_id):
+        &#34;&#34;&#34;
+        ```
+        send the public qey of the required client. The format
+        of the response is:
+        E(session_key,(&#34;/send_public_key&#34;,public_key_pem))
+        ```
+        &#34;&#34;&#34;
+        if required_id in self.registered_clients:
+            key=self.encrypt(session_key,(&#34;/send_public_key&#34;,self.registered_clients[required_id]))
+            self.conn.send(key)
+        else:
+            self.conn.send(&#34;Requested client not registered&#34;.encode())
+
+
+    def create_group_request_handler(self, session_key,creator_id, name):
+        &#34;&#34;&#34;
+        ```
+        A list containing the id of the group creator
+        is created in the self.groups dictionary
+        with the id = max(id) + 1
+        return packet is in the format:
+        E(session_key,(id,&#34;name of the group&#34;))
+        ```
+        &#34;&#34;&#34;
+        id=None
+        if(len(self.groups.keys())==0):
+            id=0
+        else:
+            id=max(self.groups.keys())+1
+        self.groups[id]=[creator_id]
+        self.group_names[id]=name
+        packet=self.encrypt(session_key,(id,name))
+        self.conn.send(packet)
+    
+    def group_invite_request_handler(self, from_client, k_temp_from , to_client, group_id):
+        &#34;&#34;&#34;
+        ```
+        Send a request to to_client and listen for
+        response, and pass the response to 
+        from client.
+
+        If the to_client accept the invite, add it to the 
+        self.groups[group_id] list
+
+        Packet format to to_client: 
+            (&#34;/group_invite&#34;,E(session_key_to, (from_client, group_id)))
+        Response format from to_client:
+            E(session_key_to,&#34;/group_invite_accept&#34;)
+            OR
+            E(session_key_to, &#34;Not accepted&#34;)
+        
+        Response to from_client
+             E(session_key_from, (&#34;/group_invite_accept&#34;,grp_id, accepted_client_id)) 
+             OR
+             E(session_key_from, &#34;Not accepted&#34; ) 
+        ```
+        &#34;&#34;&#34;
+        from_client=int(from_client)
+        to_client=int(to_client)
+        group_id=int(group_id)
+
+        k_temp_to=self.database.get_session_key(to_client)
+        packet_to = (from_client, group_id)
+        packet_to_enc=self.encrypt(k_temp_to, packet_to)
+        packet_to=pickle.dumps((&#34;/group_invite&#34;,packet_to_enc))
+        
+        details=self.database.client_listen_details[int(to_client)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        s_client.send(packet_to)
+        response=s_client.recv(4096)
+
+        s_client.close()
+        response_dec=self.decrypt(k_temp_to,response)
+        if response_dec==&#34;/group_invite_accept&#34;:
+            self.groups[int(group_id)].append(int(to_client))
+            self.log(&#34;Client &#34;+str(to_client)+&#34; added to group &#34;+str(group_id))
+            packet_from=(&#34;/group_invite_accept&#34;,group_id, to_client)
+            packet_from_enc=self.encrypt(k_temp_from,packet_from)
+            self.conn.send(packet_from_enc)
+        else:
+            packet_from=&#34;Not accepted&#34;
+            packet_from_enc=self.encrypt(k_temp_from,packet_from)
+            self.conn.send(packet_from_enc)
+    
+    def df_xchg_handler(self, from_client, k_temp_from, to_client, group_id, request):
+        &#34;&#34;&#34;
+        ```
+        1) Get the request from from_client and send to to_client in the following format
+            (
+                &#34;/init_group_dhxchg&#34;,
+                E(
+                    k_temp_to,
+                    (
+                        request,
+                        from_client,
+                        group_id
+                    )
+                )
+            )
+        2) Listen for reply from from_client and send it to to_client in the 
+        following format
+            E(
+                k_temp_from,
+                reply,
+            )
+        ```
+        &#34;&#34;&#34;
+        k_temp_to=self.database.get_session_key(to_client)
+        inner_packet=(request, from_client, group_id)
+        inner_packet_enc=self.encrypt(k_temp_to,inner_packet)
+        outer_packet=(&#34;/init_group_dhxchg&#34;,inner_packet_enc)
+        details=self.database.client_listen_details[int(to_client)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        s_client.send(pickle.dumps(outer_packet))
+        
+        response=s_client.recv(4096)
+        response_dec=self.decrypt(k_temp_to,response)
+        s_client.close()
+
+        response_enc_to=self.encrypt(k_temp_from,response_dec)
+        self.conn.send(response_enc_to)
+
+    def df_update_key(self, from_client, to_client, request, group_id):
+        &#34;&#34;&#34;
+        ```
+        1) Get the request from from_client and send to to_client in the following format
+            (
+                &#34;/update_df_key&#34;,
+                E(
+                    k_temp_to,
+                    (
+                        request,
+                        from_client,
+                        group_id
+                    )
+                )
+            )
+        ```
+        &#34;&#34;&#34;
+        to_client=int(to_client)
+        from_client=int(from_client)
+        group_id=int(group_id)
+        k_temp_to=self.database.get_session_key(to_client)
+        inner_packet=(request, from_client,group_id)
+        inner_packet_enc=self.encrypt(k_temp_to,inner_packet)
+        outer_packet=(&#34;/update_df_key&#34;, inner_packet_enc)
+        details=self.database.client_listen_details[int(to_client)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        s_client.send(pickle.dumps(outer_packet))
+        
+       
+        s_client.close()
+
+    def write_group_req_handler(self, to_client, group_id, message):
+        &#34;&#34;&#34;
+        ```
+        forwards the group message by encrypting it with k_temp
+        of to_client.
+        (
+            &#34;/write_group&#34;,
+            E(
+                k_temp,
+                (
+                    message,
+                    group_id
+                )
+            )
+        )
+        
+        ```
+        &#34;&#34;&#34;
+        to_client=int(to_client)
+        k_temp_to=self.database.get_session_key(to_client)
+        to_send=self.encrypt(k_temp_to,(message,group_id))
+        to_send=(&#34;/write_group&#34;,to_send)
+        details=self.database.client_listen_details[int(to_client)]
+        port=details[1]
+        ip=details[0]
+        s_client = socket.socket()
+        s_client.connect((ip,int(port)))
+        s_client.send(pickle.dumps(to_send))
+        s_client.close()
+
+
+    def request_handler(self, request):
+        &#34;&#34;&#34;
+        ```
+        The format of any request will be (client_id, E(K_temp,(request_type, ...arguements..., ticket)))
+
+        eg. 
+
+        Authentication request: (ID, E(K_temp,(&#34;/auth&#34;,ticket)))
+        ```
+        &#34;&#34;&#34;
+        self.debug(&#34;Client request bin: &#34; + str(request))
+        request_decoded=pickle.loads(request)
+        client_id=int(request_decoded[0])
+        self.log(&#34;got request from client: &#34; + str(client_id))
+        client_K_temp=self.database.get_session_key(client_id)
+        self.debug(&#34;client k_temp: &#34; + str(client_K_temp))
+        client_ticket=self.database.get_ticket(client_id)
+        self.debug(&#34;decoded request&#34; + str(request_decoded))
+        arguements_decrypted=self.decrypt(client_K_temp, request_decoded[1])
+        req_type=arguements_decrypted[0]
+        self.debug(&#34;rec arguement:&#34; + str(arguements_decrypted) )
+        ticket_received=arguements_decrypted[-1]
+        self.debug(&#34;Received ticket: &#34; + str(ticket_received))
+        self.debug(&#34;Stored ticket:   &#34; + str(client_ticket))
+        if ticket_received!=client_ticket:
+            self.conn.send(&#34;Not Authenticated&#34;.encode())
+            self.log(&#34;Client &#34; + str(client_id) + &#34; cannot be authenticated&#34;)
+            return None
+        self.log(req_type)
+        if req_type==&#34;/auth&#34;:
+            pub_key=arguements_decrypted[1]
+            self.auth_request_handler(client_id,pub_key)
+        elif req_type==&#34;/who&#34;:
+            self.who_request_handler(client_id, client_K_temp)
+        elif req_type==&#34;/write_all&#34;:
+            self.write_all_request_handler(arguements_decrypted[1],arguements_decrypted[2])
+        elif req_type==&#34;/create_group&#34;:
+            self.create_group_request_handler(client_K_temp,client_id,arguements_decrypted[1])
+        elif req_type==&#34;/group_invite&#34;:
+            self.group_invite_request_handler(client_id,client_K_temp,arguements_decrypted[2],arguements_decrypted[1])
+        elif req_type==&#34;/request_public_key&#34;:
+            response_id=int(client_id)
+            req_id=int(arguements_decrypted[1])
+            self.request_public_key_handler(client_K_temp,req_id)
+        elif req_type==&#34;/send_public_key&#34;:
+            pass
+        elif req_type==&#34;/init_group_dhxchg&#34;:
+            self.df_xchg_handler(client_id,client_K_temp,arguements_decrypted[2],arguements_decrypted[3],arguements_decrypted[1])
+        elif req_type==&#34;/update_df_key&#34;:
+            self.df_update_key(client_id,arguements_decrypted[2],arguements_decrypted[1],arguements_decrypted[3])
+        elif req_type==&#34;/write_group&#34;:
+            self.write_group_req_handler(arguements_decrypted[2],arguements_decrypted[3],arguements_decrypted[1])
+        
+        
+
+    def run(self):
+        self.log(&#34;running&#34;)
+
+        self.s = socket.socket()
+        self.s.bind((&#39;&#39;,self.port))
+
+        
+        self.s.listen(10)
+        self.log(&#34;Listening on port &#34;+str(self.port))
+
+        while True:
+            self.conn,self.addr = self.s.accept()
+            client_request=self.conn.recv(4096)
+            self.request_handler(client_request)
+
+            self.conn.close()</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="chat.chat_server.auth_request_handler"><code class="name flex">
+<span>def <span class="ident">auth_request_handler</span></span>(<span>self, client_id, public_key)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>if this function is called then the key and ticket has
+been verified, add this client to the set of
+registered client and send ack.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def auth_request_handler(self, client_id, public_key):
+        &#34;&#34;&#34;
+        if this function is called then the key and ticket has
+        been verified, add this client to the set of
+        registered client and send ack.
+        &#34;&#34;&#34;
+        self.conn.send(&#34;Authenticated&#34;.encode())
+        self.log(str(client_id)+&#34; authenticated!&#34;)
+        
+        self.debug(&#34;cllient &#34;+ str(client_id) + &#34;public key : &#34; + str(public_key))
+        #add to the list of registered clients
+        self.registered_clients[client_id]=public_key</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.create_group_request_handler"><code class="name flex">
+<span>def <span class="ident">create_group_request_handler</span></span>(<span>self, session_key, creator_id, name)</span>
+</code></dt>
+<dd>
+<div class="desc"><pre><code>A list containing the id of the group creator
+is created in the self.groups dictionary
+with the id = max(id) + 1
+return packet is in the format:
+E(session_key,(id,&quot;name of the group&quot;))
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_group_request_handler(self, session_key,creator_id, name):
+    &#34;&#34;&#34;
+    ```
+    A list containing the id of the group creator
+    is created in the self.groups dictionary
+    with the id = max(id) + 1
+    return packet is in the format:
+    E(session_key,(id,&#34;name of the group&#34;))
+    ```
+    &#34;&#34;&#34;
+    id=None
+    if(len(self.groups.keys())==0):
+        id=0
+    else:
+        id=max(self.groups.keys())+1
+    self.groups[id]=[creator_id]
+    self.group_names[id]=name
+    packet=self.encrypt(session_key,(id,name))
+    self.conn.send(packet)</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.debug"><code class="name flex">
+<span>def <span class="ident">debug</span></span>(<span>self, out_string)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def debug(self, out_string):
+    if self.debug_v:
+        print(&#34;[Chat server][debug]&#34;,out_string)</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.decrypt"><code class="name flex">
+<span>def <span class="ident">decrypt</span></span>(<span>self, key, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>decryption using furnet, which uses AES encryption</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def decrypt(self, key, obj):
+    &#34;&#34;&#34;
+    decryption using furnet, which uses AES encryption
+    &#34;&#34;&#34;
+    decryption_function=Fernet(key)
+    decrypted=pickle.loads(decryption_function.decrypt(obj))
+    return decrypted</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.df_update_key"><code class="name flex">
+<span>def <span class="ident">df_update_key</span></span>(<span>self, from_client, to_client, request, group_id)</span>
+</code></dt>
+<dd>
+<div class="desc"><pre><code>1) Get the request from from_client and send to to_client in the following format
+    (
+        &quot;/update_df_key&quot;,
+        E(
+            k_temp_to,
+            (
+                request,
+                from_client,
+                group_id
+            )
+        )
+    )
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def df_update_key(self, from_client, to_client, request, group_id):
+    &#34;&#34;&#34;
+    ```
+    1) Get the request from from_client and send to to_client in the following format
+        (
+            &#34;/update_df_key&#34;,
+            E(
+                k_temp_to,
+                (
+                    request,
+                    from_client,
+                    group_id
+                )
+            )
+        )
+    ```
+    &#34;&#34;&#34;
+    to_client=int(to_client)
+    from_client=int(from_client)
+    group_id=int(group_id)
+    k_temp_to=self.database.get_session_key(to_client)
+    inner_packet=(request, from_client,group_id)
+    inner_packet_enc=self.encrypt(k_temp_to,inner_packet)
+    outer_packet=(&#34;/update_df_key&#34;, inner_packet_enc)
+    details=self.database.client_listen_details[int(to_client)]
+    port=details[1]
+    ip=details[0]
+    s_client = socket.socket()
+    s_client.connect((ip,int(port)))
+    s_client.send(pickle.dumps(outer_packet))
+    
+   
+    s_client.close()</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.df_xchg_handler"><code class="name flex">
+<span>def <span class="ident">df_xchg_handler</span></span>(<span>self, from_client, k_temp_from, to_client, group_id, request)</span>
+</code></dt>
+<dd>
+<div class="desc"><pre><code>1) Get the request from from_client and send to to_client in the following format
+    (
+        &quot;/init_group_dhxchg&quot;,
+        E(
+            k_temp_to,
+            (
+                request,
+                from_client,
+                group_id
+            )
+        )
+    )
+2) Listen for reply from from_client and send it to to_client in the 
+following format
+    E(
+        k_temp_from,
+        reply,
+    )
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def df_xchg_handler(self, from_client, k_temp_from, to_client, group_id, request):
+    &#34;&#34;&#34;
+    ```
+    1) Get the request from from_client and send to to_client in the following format
+        (
+            &#34;/init_group_dhxchg&#34;,
+            E(
+                k_temp_to,
+                (
+                    request,
+                    from_client,
+                    group_id
+                )
+            )
+        )
+    2) Listen for reply from from_client and send it to to_client in the 
+    following format
+        E(
+            k_temp_from,
+            reply,
+        )
+    ```
+    &#34;&#34;&#34;
+    k_temp_to=self.database.get_session_key(to_client)
+    inner_packet=(request, from_client, group_id)
+    inner_packet_enc=self.encrypt(k_temp_to,inner_packet)
+    outer_packet=(&#34;/init_group_dhxchg&#34;,inner_packet_enc)
+    details=self.database.client_listen_details[int(to_client)]
+    port=details[1]
+    ip=details[0]
+    s_client = socket.socket()
+    s_client.connect((ip,int(port)))
+    s_client.send(pickle.dumps(outer_packet))
+    
+    response=s_client.recv(4096)
+    response_dec=self.decrypt(k_temp_to,response)
+    s_client.close()
+
+    response_enc_to=self.encrypt(k_temp_from,response_dec)
+    self.conn.send(response_enc_to)</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.encrypt"><code class="name flex">
+<span>def <span class="ident">encrypt</span></span>(<span>self, key, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>encrption using furnet, which uses AES encryption</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def encrypt(self, key, obj):
+    &#34;&#34;&#34;
+    encrption using furnet, which uses AES encryption
+    &#34;&#34;&#34;
+    encryption_function=Fernet(key)
+    encrypted=encryption_function.encrypt(pickle.dumps(obj))
+    return encrypted</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.group_invite_request_handler"><code class="name flex">
+<span>def <span class="ident">group_invite_request_handler</span></span>(<span>self, from_client, k_temp_from, to_client, group_id)</span>
+</code></dt>
+<dd>
+<div class="desc"><pre><code>Send a request to to_client and listen for
+response, and pass the response to 
+from client.
+
+If the to_client accept the invite, add it to the 
+self.groups[group_id] list
+
+Packet format to to_client: 
+    (&quot;/group_invite&quot;,E(session_key_to, (from_client, group_id)))
+Response format from to_client:
+    E(session_key_to,&quot;/group_invite_accept&quot;)
+    OR
+    E(session_key_to, &quot;Not accepted&quot;)
+
+Response to from_client
+     E(session_key_from, (&quot;/group_invite_accept&quot;,grp_id, accepted_client_id)) 
+     OR
+     E(session_key_from, &quot;Not accepted&quot; ) 
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def group_invite_request_handler(self, from_client, k_temp_from , to_client, group_id):
+    &#34;&#34;&#34;
+    ```
+    Send a request to to_client and listen for
+    response, and pass the response to 
+    from client.
+
+    If the to_client accept the invite, add it to the 
+    self.groups[group_id] list
+
+    Packet format to to_client: 
+        (&#34;/group_invite&#34;,E(session_key_to, (from_client, group_id)))
+    Response format from to_client:
+        E(session_key_to,&#34;/group_invite_accept&#34;)
+        OR
+        E(session_key_to, &#34;Not accepted&#34;)
+    
+    Response to from_client
+         E(session_key_from, (&#34;/group_invite_accept&#34;,grp_id, accepted_client_id)) 
+         OR
+         E(session_key_from, &#34;Not accepted&#34; ) 
+    ```
+    &#34;&#34;&#34;
+    from_client=int(from_client)
+    to_client=int(to_client)
+    group_id=int(group_id)
+
+    k_temp_to=self.database.get_session_key(to_client)
+    packet_to = (from_client, group_id)
+    packet_to_enc=self.encrypt(k_temp_to, packet_to)
+    packet_to=pickle.dumps((&#34;/group_invite&#34;,packet_to_enc))
+    
+    details=self.database.client_listen_details[int(to_client)]
+    port=details[1]
+    ip=details[0]
+    s_client = socket.socket()
+    s_client.connect((ip,int(port)))
+    s_client.send(packet_to)
+    response=s_client.recv(4096)
+
+    s_client.close()
+    response_dec=self.decrypt(k_temp_to,response)
+    if response_dec==&#34;/group_invite_accept&#34;:
+        self.groups[int(group_id)].append(int(to_client))
+        self.log(&#34;Client &#34;+str(to_client)+&#34; added to group &#34;+str(group_id))
+        packet_from=(&#34;/group_invite_accept&#34;,group_id, to_client)
+        packet_from_enc=self.encrypt(k_temp_from,packet_from)
+        self.conn.send(packet_from_enc)
+    else:
+        packet_from=&#34;Not accepted&#34;
+        packet_from_enc=self.encrypt(k_temp_from,packet_from)
+        self.conn.send(packet_from_enc)</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.log"><code class="name flex">
+<span>def <span class="ident">log</span></span>(<span>self, out_string)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def log(self, out_string):
+    if self.verbose:
+        print(&#34;[Chat server]&#34;,out_string)</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.request_handler"><code class="name flex">
+<span>def <span class="ident">request_handler</span></span>(<span>self, request)</span>
+</code></dt>
+<dd>
+<div class="desc"><pre><code>The format of any request will be (client_id, E(K_temp,(request_type, ...arguements..., ticket)))
+
+eg. 
+
+Authentication request: (ID, E(K_temp,(&quot;/auth&quot;,ticket)))
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def request_handler(self, request):
+    &#34;&#34;&#34;
+    ```
+    The format of any request will be (client_id, E(K_temp,(request_type, ...arguements..., ticket)))
+
+    eg. 
+
+    Authentication request: (ID, E(K_temp,(&#34;/auth&#34;,ticket)))
+    ```
+    &#34;&#34;&#34;
+    self.debug(&#34;Client request bin: &#34; + str(request))
+    request_decoded=pickle.loads(request)
+    client_id=int(request_decoded[0])
+    self.log(&#34;got request from client: &#34; + str(client_id))
+    client_K_temp=self.database.get_session_key(client_id)
+    self.debug(&#34;client k_temp: &#34; + str(client_K_temp))
+    client_ticket=self.database.get_ticket(client_id)
+    self.debug(&#34;decoded request&#34; + str(request_decoded))
+    arguements_decrypted=self.decrypt(client_K_temp, request_decoded[1])
+    req_type=arguements_decrypted[0]
+    self.debug(&#34;rec arguement:&#34; + str(arguements_decrypted) )
+    ticket_received=arguements_decrypted[-1]
+    self.debug(&#34;Received ticket: &#34; + str(ticket_received))
+    self.debug(&#34;Stored ticket:   &#34; + str(client_ticket))
+    if ticket_received!=client_ticket:
+        self.conn.send(&#34;Not Authenticated&#34;.encode())
+        self.log(&#34;Client &#34; + str(client_id) + &#34; cannot be authenticated&#34;)
+        return None
+    self.log(req_type)
+    if req_type==&#34;/auth&#34;:
+        pub_key=arguements_decrypted[1]
+        self.auth_request_handler(client_id,pub_key)
+    elif req_type==&#34;/who&#34;:
+        self.who_request_handler(client_id, client_K_temp)
+    elif req_type==&#34;/write_all&#34;:
+        self.write_all_request_handler(arguements_decrypted[1],arguements_decrypted[2])
+    elif req_type==&#34;/create_group&#34;:
+        self.create_group_request_handler(client_K_temp,client_id,arguements_decrypted[1])
+    elif req_type==&#34;/group_invite&#34;:
+        self.group_invite_request_handler(client_id,client_K_temp,arguements_decrypted[2],arguements_decrypted[1])
+    elif req_type==&#34;/request_public_key&#34;:
+        response_id=int(client_id)
+        req_id=int(arguements_decrypted[1])
+        self.request_public_key_handler(client_K_temp,req_id)
+    elif req_type==&#34;/send_public_key&#34;:
+        pass
+    elif req_type==&#34;/init_group_dhxchg&#34;:
+        self.df_xchg_handler(client_id,client_K_temp,arguements_decrypted[2],arguements_decrypted[3],arguements_decrypted[1])
+    elif req_type==&#34;/update_df_key&#34;:
+        self.df_update_key(client_id,arguements_decrypted[2],arguements_decrypted[1],arguements_decrypted[3])
+    elif req_type==&#34;/write_group&#34;:
+        self.write_group_req_handler(arguements_decrypted[2],arguements_decrypted[3],arguements_decrypted[1])</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.request_public_key_handler"><code class="name flex">
+<span>def <span class="ident">request_public_key_handler</span></span>(<span>self, session_key, required_id)</span>
+</code></dt>
+<dd>
+<div class="desc"><pre><code>send the public qey of the required client. The format
+of the response is:
+E(session_key,(&quot;/send_public_key&quot;,public_key_pem))
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def request_public_key_handler(self, session_key,required_id):
+    &#34;&#34;&#34;
+    ```
+    send the public qey of the required client. The format
+    of the response is:
+    E(session_key,(&#34;/send_public_key&#34;,public_key_pem))
+    ```
+    &#34;&#34;&#34;
+    if required_id in self.registered_clients:
+        key=self.encrypt(session_key,(&#34;/send_public_key&#34;,self.registered_clients[required_id]))
+        self.conn.send(key)
+    else:
+        self.conn.send(&#34;Requested client not registered&#34;.encode())</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.run"><code class="name flex">
+<span>def <span class="ident">run</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def run(self):
+    self.log(&#34;running&#34;)
+
+    self.s = socket.socket()
+    self.s.bind((&#39;&#39;,self.port))
+
+    
+    self.s.listen(10)
+    self.log(&#34;Listening on port &#34;+str(self.port))
+
+    while True:
+        self.conn,self.addr = self.s.accept()
+        client_request=self.conn.recv(4096)
+        self.request_handler(client_request)
+
+        self.conn.close()</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.who_request_handler"><code class="name flex">
+<span>def <span class="ident">who_request_handler</span></span>(<span>self, client_id, k_temp)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Force client to call /auth first so that they could
+be added to the set of registered clients.
+Send the list of all registered clients encrypted by k_temp.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def who_request_handler(self, client_id, k_temp):
+    &#34;&#34;&#34;
+    Force client to call /auth first so that they could
+    be added to the set of registered clients.
+    Send the list of all registered clients encrypted by k_temp.
+    &#34;&#34;&#34;
+    self.debug(&#34;Handling who reqeust from &#34;+str(client_id))
+    if client_id not in self.registered_clients:
+        self.conn.send(&#34;Please authenticate first&#34;.encode())
+    else:
+        send_packet=self.encrypt(k_temp,tuple(self.registered_clients))
+        self.debug(str(send_packet))
+        self.debug(self.decrypt(k_temp,send_packet))
+        self.debug(&#34;k_temp &#34;+str(k_temp))
+        self.conn.send(send_packet)</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.write_all_request_handler"><code class="name flex">
+<span>def <span class="ident">write_all_request_handler</span></span>(<span>self, write_to, message)</span>
+</code></dt>
+<dd>
+<div class="desc"><pre><code>1) get the listen port of the client
+2) send the packet to the client
+packet would be sent in the following format:
+(&quot;/write_all&quot;, E(pub_key, (from_id,message)))
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_all_request_handler(self, write_to, message):
+    &#34;&#34;&#34;
+    ```
+    1) get the listen port of the client
+    2) send the packet to the client
+    packet would be sent in the following format:
+    (&#34;/write_all&#34;, E(pub_key, (from_id,message)))
+    ```
+    &#34;&#34;&#34;
+    details=self.database.client_listen_details[int(write_to)]
+    port=details[1]
+    ip=details[0]
+    s_client = socket.socket()
+    s_client.connect((ip,int(port)))
+    packet=(&#34;/write_all&#34;, message)
+    s_client.send(pickle.dumps(packet))
+    s_client.close()</code></pre>
+</details>
+</dd>
+<dt id="chat.chat_server.write_group_req_handler"><code class="name flex">
+<span>def <span class="ident">write_group_req_handler</span></span>(<span>self, to_client, group_id, message)</span>
+</code></dt>
+<dd>
+<div class="desc"><pre><code>forwards the group message by encrypting it with k_temp
+of to_client.
+(
+    &quot;/write_group&quot;,
+    E(
+        k_temp,
+        (
+            message,
+            group_id
+        )
+    )
+)
+
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_group_req_handler(self, to_client, group_id, message):
+    &#34;&#34;&#34;
+    ```
+    forwards the group message by encrypting it with k_temp
+    of to_client.
+    (
+        &#34;/write_group&#34;,
+        E(
+            k_temp,
+            (
+                message,
+                group_id
+            )
+        )
+    )
+    
+    ```
+    &#34;&#34;&#34;
+    to_client=int(to_client)
+    k_temp_to=self.database.get_session_key(to_client)
+    to_send=self.encrypt(k_temp_to,(message,group_id))
+    to_send=(&#34;/write_group&#34;,to_send)
+    details=self.database.client_listen_details[int(to_client)]
+    port=details[1]
+    ip=details[0]
+    s_client = socket.socket()
+    s_client.connect((ip,int(port)))
+    s_client.send(pickle.dumps(to_send))
+    s_client.close()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="chat.chat_server" href="#chat.chat_server">chat_server</a></code></h4>
+<ul class="">
+<li><code><a title="chat.chat_server.auth_request_handler" href="#chat.chat_server.auth_request_handler">auth_request_handler</a></code></li>
+<li><code><a title="chat.chat_server.create_group_request_handler" href="#chat.chat_server.create_group_request_handler">create_group_request_handler</a></code></li>
+<li><code><a title="chat.chat_server.debug" href="#chat.chat_server.debug">debug</a></code></li>
+<li><code><a title="chat.chat_server.decrypt" href="#chat.chat_server.decrypt">decrypt</a></code></li>
+<li><code><a title="chat.chat_server.df_update_key" href="#chat.chat_server.df_update_key">df_update_key</a></code></li>
+<li><code><a title="chat.chat_server.df_xchg_handler" href="#chat.chat_server.df_xchg_handler">df_xchg_handler</a></code></li>
+<li><code><a title="chat.chat_server.encrypt" href="#chat.chat_server.encrypt">encrypt</a></code></li>
+<li><code><a title="chat.chat_server.group_invite_request_handler" href="#chat.chat_server.group_invite_request_handler">group_invite_request_handler</a></code></li>
+<li><code><a title="chat.chat_server.log" href="#chat.chat_server.log">log</a></code></li>
+<li><code><a title="chat.chat_server.request_handler" href="#chat.chat_server.request_handler">request_handler</a></code></li>
+<li><code><a title="chat.chat_server.request_public_key_handler" href="#chat.chat_server.request_public_key_handler">request_public_key_handler</a></code></li>
+<li><code><a title="chat.chat_server.run" href="#chat.chat_server.run">run</a></code></li>
+<li><code><a title="chat.chat_server.who_request_handler" href="#chat.chat_server.who_request_handler">who_request_handler</a></code></li>
+<li><code><a title="chat.chat_server.write_all_request_handler" href="#chat.chat_server.write_all_request_handler">write_all_request_handler</a></code></li>
+<li><code><a title="chat.chat_server.write_group_req_handler" href="#chat.chat_server.write_group_req_handler">write_group_req_handler</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>

@@ -145,13 +145,15 @@ class client:
        
 
         """
-                Client                                                        KDC
+        ```
+                Client                 ---                         KDC  
 
-            (ID_client, TS1)                ---------------->         
-            
-                                            <----------------           E(K_c, (E(K_temp, Ticket), Nonce, TS2))
-            K_temp=gen_session_key()
-            ticket=decrypt(K_temp, Ticket)
+            (ID_client, TS1)         --------------->          
+              
+                                    <----------------    E(K_c, (E(K_temp, Ticket), Nonce, TS2))  
+            K_temp=gen_session_key()  
+            ticket=decrypt(K_temp, Ticket) 
+        ``` 
         """
         self.s_KDC = socket.socket()
         self.s_KDC.connect((self.kdc_server_ip,self.kdc_server_port))
@@ -181,20 +183,24 @@ class client:
     
     def connet_to_chat_server(self):
         """
-        The client sould have a valid ticket and session_key before contacting the chat server.
+        ```
+        The client sould have a valid ticket and session_key before contacting 
+        the chat server.
         This can be done by calling the authenticate function of this class
 
-        Client                                                    Chat Server
-        ~~~~~~                                                    ~~~~~~~~~~~~
+        Client               ---                        Chat Server
 
-        (ID,E(k_temp,(request, pub_key,ticket))) ----------------->          
-        #Here request would be /auth
+        (
+        ID,                                 --------->
+        E(k_temp,(request, pub_key,ticket))
+        )           
+        Here request would be /auth
 
-                                        <-----------------         Acknowledgement
-                                                                    "Authenticated"
-                                                                          or
-                                                                  "Not Authenticated"
-
+                                        <-------         Acknowledgement
+                                                         "Authenticated"
+                                                             or
+                                                        ot Authenticated"
+        ```
         """
         self.s_CHAT = socket.socket()
         self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
@@ -226,6 +232,7 @@ class client:
         return response
     def write_all_request(self, message):
         """
+        ```
         1) get the list of connected clients
         2) get the public keys of those clients
         3) encrypt the message with public keys 
@@ -243,6 +250,7 @@ class client:
                 )
             )
         )
+        ```
         """
         client_list=self.who_request()
         for id in client_list:
@@ -290,6 +298,7 @@ class client:
 
     def create_group_request(self, name):
         """
+        ```
         Request format: (ID, E(k_temp, ("/create_group", "name of the group" ,ticket)))
         Response format: E(k_temp, (group_id,"name of the group"))
 
@@ -302,6 +311,7 @@ class client:
 
         After DH key exchange the final key is saved in
         self.group_keys dictionary
+        ```
         """
         self.s_CHAT = socket.socket()
         self.s_CHAT.connect((self.chat_server_ip,self.chat_server_port))
@@ -346,29 +356,30 @@ class client:
 
     def dh_key_xchange_request(self, group_id, to_client):
         """
-        Initial key exchange(if group_id not in self.group_keys.keys()):
-        1) get DH object from self.groups[grp_id]
-        2) get the public key of to_client
-        3) derive the public key for DH and send it to to_client via server 
-        in the following format
-            (
-                self.ID, 
-                E(
-                    k_temp,
-                    (
-                        "/init_group_dhxchg".
-                        E(
-                            k_pub_to_client,
-                            my_public_key_DH
-                        ),
-                        to_client,
-                        grp_id,
-                        ticket
-                    )
-                )
-            )
-        4) The to_client will send it's public key via server in the followint format
-            E(
+        ```
+        Initial key exchange(if group_id not in self.group_keys.keys()):  
+        1) get DH object from self.groups[grp_id]  
+        2) get the public key of to_client  
+        3) derive the public key for DH and send it to to_client via server   
+        in the following format  
+            (  
+                self.ID,   
+                E(  
+                    k_temp,  
+                    (  
+                        "/init_group_dhxchg".  
+                        E(  
+                            k_pub_to_client,  
+                            my_public_key_DH  
+                        ),  
+                        to_client,  
+                        grp_id,  
+                        ticket  
+                    )  
+                )  
+            )  
+        4) The to_client will send it's public key via server in the followint format  
+            E(  
                 k_temp,
                 (
                     E(
@@ -441,7 +452,7 @@ class client:
                 )
             )
         6) add key to self.group_keys
-        
+        ```
         """
         
         if group_id not in self.group_keys.keys():
@@ -585,6 +596,7 @@ class client:
            
     def write_group_request(self, group_id,message):
         """
+        ```
         Send the request to all the client in the
         group via server. In the following format:
         (
@@ -603,6 +615,7 @@ class client:
                 )
             )
         )
+        ```
         """
         group_id=int(group_id)
         K=self.group_keys[group_id]
@@ -665,6 +678,7 @@ class client:
                 
     def start_listening(self):
         """
+        ```
         receives the forwarded message from server.
         message originated at indivisual clients
 
@@ -723,6 +737,7 @@ class client:
                 )
             )
 
+        ```
         """
         print("Listening Started")
         self.s = socket.socket()
