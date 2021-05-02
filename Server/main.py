@@ -5,12 +5,14 @@ import pickle
 
 
 class Database:
-    def __init__(self, client_key_dict):
+    def __init__(self, client_key_dict, client_listen_details_dict):
         self.ticket_dict={}
         self.ticket_lock=threading.Lock()
         self.session_key_dict={}
         self.session_key_lock=threading.Lock()
         self.client_secret_keys=client_key_dict
+        self.client_listen_details=client_listen_details_dict
+        
     
     def add_ticket(self, client, ticket):
         """
@@ -69,6 +71,7 @@ from kdc import kdc_server
 from chat import chat_server
 server_details_path="../server.info"
 client_keys_path="all_client_secrets.info"
+client_listen_path="all_client_listening.info"
 
 def loadData(name):
     f=open(name,'rb')
@@ -78,7 +81,8 @@ if __name__=="__main__":
 
     server_details=loadData(server_details_path)
     client_keys=loadData(client_keys_path)
-    database=Database(client_keys)
+    client_listen_details=loadData(client_listen_path)
+    database=Database(client_keys,client_listen_details)
 
     my_kdc_server = kdc_server(verb=True,database=database,port=server_details['kdc_server_port'],debug=True)
     my_chat_server = chat_server(verb=True,database=database,port=server_details['chat_server_port'], debug=True)

@@ -15,6 +15,9 @@ if __name__=='__main__':
     pickle.dump(details,f)
 
     client_private_keys={}
+
+    #format: {id:(ip, port)}
+    client_listening_details={}
     client_id=0
 
     # client creation
@@ -24,12 +27,19 @@ if __name__=='__main__':
             break
         key = Fernet.generate_key()
         id=client_id
+        listening_ip=input("Enter listening ip for the client "+str(id)+" :")
+        listening_port=input("Enter listening port for the client "+str(id)+" :")
+        
         client_private_keys[id]=key
+        client_listening_details[id]=(listening_ip,listening_port)
 
         f=open("client_"+str(id)+".info","wb")
-        pickle.dump((id,key),f)
+        pickle.dump((id,key,listening_ip,listening_port),f)
         client_id+=1
 
     f=open("all_client_secrets.info",'wb')
     pickle.dump(client_private_keys,f)
+
+    f=open("all_client_listening.info",'wb')
+    pickle.dump(client_listening_details,f)
     
